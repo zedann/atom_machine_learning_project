@@ -18,6 +18,26 @@ const userSchema = new mongoose.Schema({
     trim: true,
     validate: [],
   },
+  password: {
+    type: String,
+    required: [true, "Please enter a password"],
+    minlength: 8
+  },
+  phone: String,
+  passwordChangedAt: Date,
+  passwordResetCode: String,
+  passwordResetExpires: Date,
+  role: {
+    type: String,
+    enum: ["user", "doctor", "admin"],
+    default: "user"
+  },
+  active: {
+    type: Boolean,
+    default: true,
+    select: false
+  },
+
 })
 
 const User = mongoose.model("User", userSchema);
