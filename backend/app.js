@@ -1,5 +1,7 @@
 const express = require("express");
-const globalError = require('./middlewares/errorMiddleware')
+const mongoSanitize = require("express-mongo-sanitize");
+const xss = require("xss-clean");
+const globalError = require("./middlewares/errorMiddleware");
 const hpp = require("hpp");
 const morgan = require("morgan");
 const rateLimit = require("express-rate-limit");
@@ -8,13 +10,14 @@ const app = express();
 const cors = require("cors");
 // **routes
 const userRoutes = require("./routes/userRoutes");
+const ApiError = require("./utils/apiError");
 // **middleware
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
   console.log(`Mode : ${process.env.NODE_ENV}`);
 }
 // parse request body
-app.use(express.json(limit = "20kb"));
+app.use(express.json((limit = "20kb")));
 
 // enable cors
 app.use(cors());
@@ -26,10 +29,22 @@ const limiter = rateLimit({
   max: 100,
   windowMs: 60 * 60 * 1000,
   message: "Too many requests from this IP, please try again in an hour!",
-})
+});
+
+// To remove data using these defaults:
+app.use(mongoSanitize());
+
+// Or, to replace these prohibited characters with _, use:
+app.use(
+  mongoSanitize({
+    replaceWith: "_",
+  })
+);
+// prevent xss attacks
+app.use(xss());
+
 // limit request
 app.use("/api", limiter);
-
 
 // prevent http param pollution
 // TODO: add whitelist
@@ -38,11 +53,9 @@ app.use(hpp());
 // **end points
 app.use("/api/v1/users", userRoutes);
 
-
-
 // **error handler
 
-app.all('*', (req, res, next) => {
+app.all("*", (req, res, next) => {
   next(new ApiError(`Can't find this route: ${req.originalUrl}`, 400));
 });
 
