@@ -5,12 +5,65 @@
 }
 
 :root {
-  --main-color: #eee;
+  --main-color: rgb(14, 17, 23);
 }
 
-div {
-  margin: 20px auto;
-  text-align: center;
+body {
+  margin: 0px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: rgb(250, 250, 250);
+  background-color: var(--main-color);
 }
+
+.container {
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+main .sidebar-body {
+  position: fixed;
+  background-color: rgb(38, 39, 48);
+  background-attachment: fixed;
+  flex-shrink: 0;
+  height: calc(-2px + 100vh);
+  top: 0px;
+  overflow: auto;
+  padding: 6rem 1rem;
+  transition: margin-left 300ms ease 0s, box-shadow 300ms ease 0s;
+  width: 21rem;
+  z-index: 1;
+  margin-left: 0px;
+}
+main .sidebar-body .heaeder-sidebar h3 {
+  margin-bottom: 8px;
+}
+main .sidebar-body form {
+  margin-top: 16px;
+}
+main .sidebar-body form label {
+  font-size: 14px;
+}
+main .sidebar-body form select,
+main .sidebar-body form input {
+  margin-top: 0px;
+  outline: rgb(240, 42, 42);
+  border: rgb(240, 42, 42);
+  padding: 16px;
+  border-radius: 4px;
+  width: 310px;
+  background: var(--main-color);
+  color: #FFF;
+  margin-bottom: 24px;
+}
+main .sidebar-body::-webkit-scrollbar {
+  display: none !important;
+}
+main .sidebar-body::-webkit-scrollbar {
+  display: none !important;
+}
+
+
 
 /*# sourceMappingURL=style.css.map */

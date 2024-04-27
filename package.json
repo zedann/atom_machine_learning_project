@@ -1,0 +1,12 @@
+{
+  "name": "atom_machine_learning_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass":"sass --watch ./FrontApp/css/style.scss ./FrontApp/css/style.css"
+  },
+  "author": "",
+  "license": "ISC"
+}
