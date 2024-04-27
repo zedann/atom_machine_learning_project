@@ -1,245 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Atom Machine Learning</title>
-    <link rel="shortcut icon" href="./img/atom.jpeg" type="image/x-icon">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./img/atom.jpeg" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/style.css" />
     <script src="./script/script.js" defer></script>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <header></header>
     <main>
-        <div class="body">
-            <div class="container">
-                container
-            </div>
+      <div class="body">
+        <div class="container">container</div>
+      </div>
+      <div class="sidebar-body">
+        <div class="heaeder-sidebar">
+          <h3>Feature Selection</h3>
+          <img src="./img/heart.png" alt="heart" />
         </div>
-        <div class="sidebar-body">
-            <div class="heaeder-sidebar">
-                <h3>Feature Selection</h3>
-                <img src="./img/heart.png" alt="heart">
+        <form>
+          <div>
+            <div>
+              <label for="race">Race</label>
             </div>
-            <form>
-                <div>
-                    <div>
-                        <label for="race">Race</label>
-                    </div>
-                    <select name="Race" id="race">
-                        <option value="American Indian/Alaskan Native" selected>
-                            American Indian/Alaskan Native
-                        </option>
-                        <option value="Asian">Asian</option>
-                        <option value="Black">Black</option>
-                        <option value="Hispanic">Hispanic</option>
-                        <option value="Other">Other</option>
-                        <option value="White">White</option>
-                    </select>
-                </div>
-                <div>
-                    <div>
-                        <label for="Sex">Sex</label>
-                    </div>
-                    <select name="Sex" id="Sex">
-                        <option value="Male" selected>
-                            Male
-                        </option>
-                        <option value="Female"> Female
-                        </option>
-                        <option value="Black">Black</option>
-                        <option value="Hispanic">Hispanic</option>
-                        <option value="Other">Other</option>
-                        <option value="White">White</option>
-                    </select>
-                </div>
-                <div>
-                    <div>
-                        <label for="Agecategory">Age category</label>
-                    </div>
-                    <select name="Agecategory" id="Agecategory">
-                        <option value="18-24" selected>
-                            18-24
-                        </option>
-                        <option value="25-29">25-29</option>
-                        <option value="30-34">30-34</option>
-                        <option value="35-39">35-39</option>
-                        <option value="40-44">40-44</option>
-                        <option value="45-49">45-49</option>
-                        <option value="50-54">50-54</option>
-                        <option value="55-59">55-59</option>
-                        <option value="60-64">60-64</option>
-                        <option value="65-69">65-69</option>
-                        <option value="70-74">70-74</option>
-                        <option value="75-79">75-79</option>
-                        <option value="80 or older">80 or older</option>
-                    </select>
-                </div>
-                <div>
-                    <div>
-                        <label for="BMIcategory">BMI category</label>
-                    </div>
-                    <select name="BMIcategory" id="BMIcategory">
-                        <option value="Normal weight (18.5 <= BMI < 25.0)" selected>
-                            Normal weight (18.5 <= BMI < 25.0) </option>
-                        <option value="Obese (30.0 <= BMI < +Inf)">Obese (30.0 <= BMI < +Inf)</option>
-                        <option value="Overweight (25.0 <= BMI < 30.0)">Overweight (25.0 <= BMI < 30.0)</option>
-                        <option value="Underweight (BMI < 18.5)">Underweight (BMI < 18.5)</option>
-                    </select>
-                </div>
-                <div>
-                    <div>
-                        <label for="How many hours on average do you sleep?">How many hours on average do you
-                            sleep?</label>
-                    </div>
-                    <input type="number" min="1">
-                </div>
-                <div>
-                    <div>
-                        <label for="How can you define your general health?">How can you define your general
-                            health?</label>
-                    </div>
-                    <select name="How can you define your general health?" id="How can you define your general health?">
-                        <option value="Excellent" selected>
-                            Excellent
-                        </option>
-                        <option value="Fair">Fair</option>
-                        <option value="Good">Good</option>
-                        <option value="Poor">Poor</option>
-                        <option value="Very good">Very good</option>
-
-                    </select>
-                </div>
-                <div>
-                    <div>
-                        <label for="For how many days during the past 30 days was your mental health not good?">For how
-                            many days during the past 30 days was your physical health not good?</label>
-                    </div>
-                    <input type="number" name="" id="" min="1">
-                </div>
-                <div>
-                    <div>
-                        <label for="For how many days during the past 30 days was your mental health not good?">For how
-                            many days during the past 30 days was your mental health not good?</label>
-                    </div>
-                    <input type="number" name="" id="" min="1">
-                </div>
-                <div>
-                    <div>
-                        <label for="Have you played any sports (running, biking, etc.) in the past month?">Have you
-                            played any sports (running, biking, etc.) in the past month?</label>
-                    </div>
-                    <select name="Have you played any sports (running, biking, etc.) in the past month?"
-                        id="Have you played any sports (running, biking, etc.) in the past month?">
-                        <option value="No" selected>
-                            No
-                        </option>
-                        <option value="Yes">Yes</option>
-                    </select>
-                </div>
-                <div>
-                    <div>
-                        <label for="race">Have you smoked at least 100 cigarettes in your entire life (approx. 5
-                            packs)?)</label>
-                    </div>
-                    <select name="Have you smoked at least 100 cigarettes in your entire life (approx. 5 packs)?)"
-                        id="Have you smoked at least 100 cigarettes in your entire life (approx. 5 packs)?)">
-                        <option value="" selected>
-                            No
-                        </option>
-                        <option value="Yes">Yes</option>
-                    </select>
-                </div>
-                <div>
-                    <div>
-                        <label
-                            for="Do you have more than 14 drinks of alcohol (men) or more than 7 (women) in a week?">Do
-                            you have more than 14 drinks of alcohol (men) or more than 7 (women) in a week?" </label>
-                    </div>
-                    <select name="Do you have more than 14 drinks of alcohol (men) or more than 7 (women) in a week?"
-                        id="Do you have more than 14 drinks of alcohol (men) or more than 7 (women) in a week?">
-                        <option value="" selected>
-                            No
-                        </option>
-                        <option value="Yes">Yes</option>
-                    </select>
-                </div>
-                <div>
-                    <div>
-                        <label for="Did you have a stroke?">Did you have a stroke?"</label>
-                    </div>
-                    <select name="Did you have a stroke?" id="Did you have a stroke?">
-                        <option value="" selected>
-                            No
-                        </option>
-                        <option value="Yes">Yes</option>
-                    </select>
-                </div>
-                <div>
-                    <div>
-                        <label for="race">Do you have serious difficulty walking or climbing stairs?</label>
-                    </div>
-                    <select name="Do you have serious difficulty walking or climbing stairs?"
-                        id="Do you have serious difficulty walking or climbing stairs?">
-                        <option value="" selected>
-                            No
-                        </option>
-                        <option value="Yes">Yes</option>
-                    </select>
-                </div>
-                <div>
-                    <div>
-                        <label for="Have you ever had diabetes?">Have you ever had diabetes?</label>
-                    </div>
-                    <select name="Have you ever had diabetes?" id="Have you ever had diabetes?">
-                        <option value="" selected>
-                            No
-                        </option>
-                        <option value="Yes">Yes</option>
-                    </select>
-                </div>
-                <div>
-                    <div>
-                        <label for="race">Do you have asthma?</label>
-                    </div>
-                    <select name="Do you have asthma?" id="Do you have asthma?">
-                        <option value="" selected>
-                            No
-                        </option>
-                        <option value="Yes">Yes</option>
-                    </select>
-                </div>
-                <div>
-                    <div>
-                        <label for="race">Do you have kidney disease?</label>
-                    </div>
-                    <select name="Do you have kidney disease?" id="Do you have kidney disease?">
-                        <option value="" selected>
-                            No
-                        </option>
-                        <option value="Yes">Yes</option>
-                    </select>
-                </div>
-                <div>
-                    <div>
-                        <label for="race">Do you have skin cancer?</label>
-                    </div>
-                    <select name="Do you have skin cancer?" id="Do you have skin cancer?">
-                        <option value="" selected>
-                            No
-                        </option>
-                        <option value="Yes">Yes</option>
-                    </select>
-                </div>
-
-            </form>
-        </div>
+            <select name="Race" id="race">
+              <option value="American Indian/Alaskan Native" selected>
+                American Indian/Alaskan Native
+              </option>
+              <option value="Asian">Asian</option>
+              <option value="Black">Black</option>
+              <option value="Hispanic">Hispanic</option>
+              <option value="Other">Other</option>
+              <option value="White">White</option>
+            </select>
+          </div>
+          <div>
+            <div>
+              <label for="Sex">Sex</label>
+            </div>
+            <select name="Sex" id="Sex">
+              <option value="Male" selected>Male</option>
+              <option value="Female">Female</option>
+              <option value="Black">Black</option>
+              <option value="Hispanic">Hispanic</option>
+              <option value="Other">Other</option>
+              <option value="White">White</option>
+            </select>
+          </div>
+          <div>
+            <div>
+              <label for="Agecategory">Age category</label>
+            </div>
+            <select name="Agecategory" id="Agecategory">
+              <option value="18-24" selected>18-24</option>
+              <option value="25-29">25-29</option>
+              <option value="30-34">30-34</option>
+              <option value="35-39">35-39</option>
+              <option value="40-44">40-44</option>
+              <option value="45-49">45-49</option>
+              <option value="50-54">50-54</option>
+              <option value="55-59">55-59</option>
+              <option value="60-64">60-64</option>
+              <option value="65-69">65-69</option>
+              <option value="70-74">70-74</option>
+              <option value="75-79">75-79</option>
+              <option value="80 or older">80 or older</option>
+            </select>
+          </div>
+          <div>
+            <div>
+              <label for="BMIcategory">BMI category</label>
+            </div>
+            <select name="BMIcategory" id="BMIcategory">
+              <option value="Normal weight (18.5 <= BMI < 25.0)" selected>
+                Normal weight (18.5 <= BMI < 25.0)
+              </option>
+              <option value="Obese (30.0 <= BMI < +Inf)">
+                Obese (30.0 <= BMI < +Inf)
+              </option>
+              <option value="Overweight (25.0 <= BMI < 30.0)">
+                Overweight (25.0 <= BMI < 30.0)
+              </option>
+              <option value="Underweight (BMI < 18.5)">
+                Underweight (BMI < 18.5)
+              </option>
+            </select>
+          </div>
+          <div>
+            <div>
+              <label for="How many hours on average do you sleep?"
+                >How many hours on average do you sleep?</label
+              >
+            </div>
+            <input type="number" min="1" />
+          </div>
+          <div>
+            <div>
+              <label for="How can you define your general health?"
+                >How can you define your general health?</label
+              >
+            </div>
+            <select
+              name="How can you define your general health?"
+              id="How can you define your general health?"
+            >
+              <option value="Excellent" selected>Excellent</option>
+              <option value="Fair">Fair</option>
+              <option value="Good">Good</option>
+              <option value="Poor">Poor</option>
+              <option value="Very good">Very good</option>
+            </select>
+          </div>
+          <div>
+            <div>
+              <label
+                for="For how many days during the past 30 days was your mental health not good?"
+                >For how many days during the past 30 days was your physical
+                health not good?</label
+              >
+            </div>
+            <input type="number" name="" id="" min="1" />
+          </div>
+          <div>
+            <div>
+              <label
+                for="For how many days during the past 30 days was your mental health not good?"
+                >For how many days during the past 30 days was your mental
+                health not good?</label
+              >
+            </div>
+            <input type="number" name="" id="" min="1" />
+          </div>
+          <div>
+            <div>
+              <label
+                for="Have you played any sports (running, biking, etc.) in the past month?"
+                >Have you played any sports (running, biking, etc.) in the past
+                month?</label
+              >
+            </div>
+            <select
+              name="Have you played any sports (running, biking, etc.) in the past month?"
+              id="Have you played any sports (running, biking, etc.) in the past month?"
+            >
+              <option value="No" selected>No</option>
+              <option value="Yes">Yes</option>
+            </select>
+          </div>
+          <div>
+            <div>
+              <label for="race"
+                >Have you smoked at least 100 cigarettes in your entire life
+                (approx. 5 packs)?)</label
+              >
+            </div>
+            <select
+              name="Have you smoked at least 100 cigarettes in your entire life (approx. 5 packs)?)"
+              id="Have you smoked at least 100 cigarettes in your entire life (approx. 5 packs)?)"
+            >
+              <option value="" selected>No</option>
+              <option value="Yes">Yes</option>
+            </select>
+          </div>
+          <div>
+            <div>
+              <label
+                for="Do you have more than 14 drinks of alcohol (men) or more than 7 (women) in a week?"
+                >Do you have more than 14 drinks of alcohol (men) or more than 7
+                (women) in a week?"
+              </label>
+            </div>
+            <select
+              name="Do you have more than 14 drinks of alcohol (men) or more than 7 (women) in a week?"
+              id="Do you have more than 14 drinks of alcohol (men) or more than 7 (women) in a week?"
+            >
+              <option value="" selected>No</option>
+              <option value="Yes">Yes</option>
+            </select>
+          </div>
+          <div>
+            <div>
+              <label for="Did you have a stroke?"
+                >Did you have a stroke?"</label
+              >
+            </div>
+            <select name="Did you have a stroke?" id="Did you have a stroke?">
+              <option value="" selected>No</option>
+              <option value="Yes">Yes</option>
+            </select>
+          </div>
+          <div>
+            <div>
+              <label for="race"
+                >Do you have serious difficulty walking or climbing
+                stairs?</label
+              >
+            </div>
+            <select
+              name="Do you have serious difficulty walking or climbing stairs?"
+              id="Do you have serious difficulty walking or climbing stairs?"
+            >
+              <option value="" selected>No</option>
+              <option value="Yes">Yes</option>
+            </select>
+          </div>
+          <div>
+            <div>
+              <label for="Have you ever had diabetes?"
+                >Have you ever had diabetes?</label
+              >
+            </div>
+            <select
+              name="Have you ever had diabetes?"
+              id="Have you ever had diabetes?"
+            >
+              <option value="" selected>No</option>
+              <option value="Yes">Yes</option>
+            </select>
+          </div>
+          <div>
+            <div>
+              <label for="race">Do you have asthma?</label>
+            </div>
+            <select name="Do you have asthma?" id="Do you have asthma?">
+              <option value="" selected>No</option>
+              <option value="Yes">Yes</option>
+            </select>
+          </div>
+          <div>
+            <div>
+              <label for="race">Do you have kidney disease?</label>
+            </div>
+            <select
+              name="Do you have kidney disease?"
+              id="Do you have kidney disease?"
+            >
+              <option value="" selected>No</option>
+              <option value="Yes">Yes</option>
+            </select>
+          </div>
+          <div>
+            <div>
+              <label for="race">Do you have skin cancer?</label>
+            </div>
+            <select
+              name="Do you have skin cancer?"
+              id="Do you have skin cancer?"
+            >
+              <option value="" selected>No</option>
+              <option value="Yes">Yes</option>
+            </select>
+          </div>
+        </form>
+      </div>
     </main>
     <footer></footer>
-
-</body>
-
+  </body>
 </html>
