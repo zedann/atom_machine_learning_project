@@ -15,10 +15,11 @@ body {
   line-height: 1.6;
   color: rgb(250, 250, 250);
   background-color: var(--main-color);
+  min-width: 640px !important;
 }
 
 .container {
-  max-width: 540px;
+  max-width: 768px;
   margin: 0 auto;
 }
 
@@ -65,5 +66,98 @@ main .sidebar-body::-webkit-scrollbar {
 }
 
 
+.Bo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+  margin-top: 10px;
+  line-height: 1.6;
+  color: inherit;
+  width: auto;
+  user-select: none;
+  background-color: rgb(19, 23, 32);
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  cursor: pointer;
+}
+
+.Bo:hover {
+  color: red;
+  border-color: red;
+}
+
+.head {
+  margin-top: 100px;
+  font-size: 40px;
+}
+
+.h2 {
+  margin-top: 20px;
+  font-size: 25px;
+}
+
+.Di {
+  margin-bottom: 20px;
+  margin-right: 20px;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: 400;
+  max-width: 500px;
+}
+
+.last {
+  font-size: 14px;
+  color: gray;
+}
+
+.ph {
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+.cont {
+  display: flex;
+}
+
+.photo {
+  margin-top: 10px;
+  height: 350px;
+}
+
+.link {
+  color: rgb(85, 26, 139);
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+.close svg {
+  width: 20px;
+}
+
+span.open {
+  display: block;
+  cursor: pointer;
+  width: fit-content;
+  font-size: 12px;
+  border: 1px solid red;
+  padding: 8px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+@media (max-width: 1460px) {
+  .sidebar-body {
+    display: none;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
