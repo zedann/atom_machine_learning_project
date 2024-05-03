@@ -10,6 +10,7 @@ const app = express();
 const cors = require("cors");
 // **routes
 const userRoutes = require("./routes/userRoutes");
+const examineRoutes = require("./routes/examineRoutes");
 const ApiError = require("./utils/apiError");
 // **middleware
 if (process.env.NODE_ENV === "development") {
@@ -52,6 +53,7 @@ app.use(hpp());
 
 // **end points
 app.use("/api/v1/users", userRoutes);
+app.use("/api/v1/examines", examineRoutes);
 
 // **error handler
 
