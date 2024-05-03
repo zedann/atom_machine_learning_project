@@ -1,0 +1,42 @@
+[
+ {
+  "Sex":"Male",
+  "AgeCategory":"25-29", 
+  "BMI":21.62, 
+  "GenHealth":"Excellent",
+  "PhysicalActivity":"No",
+  "PhysicalHealth":1.0,
+  "MentalHealth":6.0,
+  "SleepTime":7.0,
+  "DiffWalking":"No",
+  "Smoking":"Never smoked",
+  "AlcoholDrinking":"Yes",
+  "KidneyDisease":"No",
+  "Asthma":"No",
+  "SkinCancer":"No",
+  "Stroke":"No",
+  "Diabetic":"No"
+}
+
+,
+
+{
+  "Sex":"Female",
+  "AgeCategory":"80 or older", 
+  "BMI":30.99, 
+  "GenHealth":"Fair",
+  "PhysicalActivity":"Yes",
+  "PhysicalHealth":0.0,
+  "MentalHealth":7.0,
+  "SleepTime":7.0,
+  "DiffWalking":"No",
+  "Smoking":"Yes",
+  "AlcoholDrinking":"No",
+  "KidneyDisease":"No",
+  "Asthma":"No",
+  "SkinCancer":"No",
+  "Stroke":"No",
+  "Diabetic":"No"
+
+ }
+]
