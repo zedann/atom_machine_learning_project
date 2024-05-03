@@ -60,6 +60,8 @@ example:
 }
 ```
 
+<hr>
+
 # history of patient
 
 ## Get all examines for user
