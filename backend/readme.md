@@ -47,7 +47,7 @@ example:
 }
 ```
 
-## resetPassword
+## resetPassword (NOT USED ALONE ITS PART OF forgotPassword)
 
 ### PATCH 127.0.0.1:3000/api/v1/users/resetPassword/:token
 
