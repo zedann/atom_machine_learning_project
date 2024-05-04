@@ -38,6 +38,7 @@ exports.updateOne = (Model) =>
 exports.createOne = (Model) =>
   asyncHandler(async (req, res, next) => {
     if (req.user) req.body.user = req.user;
+    console.log(req.body);
     const doc = await Model.create(req.body);
     res.status(201).json({
       status: "success",

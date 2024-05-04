@@ -85,21 +85,6 @@
       <form id="patient-form">
         <div>
           <div>
-            <label for="race">Race</label>
-          </div>
-          <select name="Race" id="race">
-            <option value="American Indian/Alaskan Native" selected>
-              American Indian/Alaskan Native
-            </option>
-            <option value="Asian">Asian</option>
-            <option value="Black">Black</option>
-            <option value="Hispanic">Hispanic</option>
-            <option value="Other">Other</option>
-            <option value="White">White</option>
-          </select>
-        </div>
-        <div>
-          <div>
             <label for="Sex">Sex</label>
           </div>
           <select name="Sex" id="Sex">
@@ -112,7 +97,7 @@
             <label for="Agecategory">Age category</label>
           </div>
           
-          <select name="Agecategory" id="Agecategory">
+          <select name="AgeCategory" id="Agecategory">
             <option value="18-24" selected>18-24</option>
             <option value="25-29">25-29</option>
             <option value="30-34">30-34</option>
@@ -132,19 +117,19 @@
           <div>
             <label for="BMI-category">BMI category</label>
           </div>
-          <input type="number" name="BMI-category" id="BMI-category">
+          <input type="number" name="BMI" id="BMI-category">
         </div>
         <div>
           <div>
             <label for="sleep-hours">How many hours on average do you sleep?</label>
           </div>
-          <input type="number" min="1" id="sleep-hours" name="sleep-hours">
+          <input type="number" min="1" id="sleep-hours" name="SleepTime">
         </div>
         <div>
           <div>
             <label for="general-health">How can you define your general health?</label>
           </div>
-          <select name="general-health" id="general-health">
+          <select name="GenHealth" id="general-health">
             <option value="Excellent" selected>Excellent</option>
             <option value="Fair">Fair</option>
             <option value="Good">Good</option>
@@ -157,7 +142,7 @@
             <label for="exercis">During the past month, other than your regular job, did you participate in any physical activities or exercis
               es such as running, calisthenics, golf, gardening, or walking for exercise?</label>
           </div>
-          <select name="exercis"
+          <select name="PhysicalActivity"
             id="exercis">
             <option value="No" selected>No</option>
             <option value="Yes">Yes</option>
@@ -168,26 +153,21 @@
             <label for="physical-health">Now thinking about your physical health, which includes physical illness and injury, for how many days
               during the past 30 days was your physical health not good?</label>
           </div>
-          <input type="number" min="1" max="30" id="physical-health" name="physical-health">
+          <input type="number" min="1" max="30" id="physical-health" name="PhysicalHealth">
         </div>
         <div>
           <div>
             <label for="mental-health">Now thinking about your mental health, which includes stress, depression, and problems with emotions,
               for how many days during the past 30 days was your mental health not good?</label>
           </div>
-          <input type="number" min="1" max="30" id="mental-health" name="mental-health">
+          <input type="number" min="1" max="30" id="mental-health" name="MentalHealth">
         </div>
-        <div>
-          <div>
-            <label for="sleep-hours">On average, how many hours of sleep do you get in a 24-hour period?</label>
-          </div>
-          <input type="number" min="1" max="30" name="sleep-hours" id="sleep-hours">
-        </div>
+        
         <div>
           <div>
             <label for="walking-difficulty">Do you have serious difficulty walking or climbing stairs?</label>
           </div>
-          <select name="walking-difficulty"
+          <select name="DiffWalking"
             id="walking-difficulty">
             <option value="No" selected>No</option>
             <option value="Yes">Yes</option>
@@ -197,7 +177,7 @@
           <div>
             <label for="smoking-status">What is your Smoking Status?</label>
           </div>
-          <select name="smoking-status" id="smoking-status">
+          <select name="Smoking" id="smoking-status">
             <option value="Never smoked" selected>Never smoked</option>
             <option value="No">No</option>
             <option value="Former smoker">Former smoker</option>
@@ -210,7 +190,7 @@
           <div>
             <label for="drink-alcohol">Are you an Adults who have had at least one drink of alcohol in the past 30 days.?</label>
           </div>
-          <select name="drink-alcohol"
+          <select name="AlcoholDrinking"
             id="Have you smoked at least 100 cigarettes in your entire life (approx. 5 packs)?)">
             <option value="No" selected>No</option>
             <option value="Yes">Yes</option>
@@ -218,7 +198,7 @@
         </div>
         <div>
           <label for="kidney-stones">Not including kidney stones, bladder infection or incontinence, were you ever told you had kidney disease?</label>
-          <select name="kidney-stones" id="kidney-stones">
+          <select name="smoking-status" id="kidney-stones">
             <option value="No">No</option>
             <option value="yes">Yes</option>
           </select>
@@ -232,7 +212,7 @@
         </div>
         <div>
           <label for="skin-cancer">Were you ever told you had skin cancer that is not melanoma?</label>
-          <select name="skin-cancer" id="skin-cancer">
+          <select name="SkinCancer" id="skin-cancer">
             <option value="No">No</option>
             <option value="Yes">Yes</option>
           </select>
@@ -240,14 +220,23 @@
         <div>
           <label for="kidney-disease">Not including kidney stones, bladder infection or incontinence, were you ever told you had kidney
             disease?</label>
-            <select name="kidney-disease" id="kidney-disease">
+            <select name="KidneyDisease" id="kidney-disease">
               <option value="No">No</option>
               <option value="Yes">Yes</option>
             </select>
         </div>
         <div>
+          <label for="kidney-disease">Not including kidney stones, bladder infection or incontinence, were you ever told you had kidney
+            disease?</label>
+            <select name="Stroke" id="kidney-disease">
+              <option value="No">No</option>
+              <option value="Yes">Yes</option>
+            </select>
+        </div>
+        
+        <div>
           <label for="diabetes">Were you ever told you had diabetes?</label>
-          <select name="diabetes" id="diabetes">
+          <select name="Diabetic" id="diabetes">
             <option value="No">No</option>
             <option value="No-borderline diabetes">No (borderline diabetes)</option>
             <option value="Yes">Yes</option>

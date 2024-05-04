@@ -1,10 +1,10 @@
 console.log("Hello my team!");
 
-document.querySelector(".close").addEventListener("click", function () {
+document.querySelector(".close").addEventListener("click", function() {
   document.querySelector(".sidebar-body").style.display = "none";
 });
 
-document.querySelector(".open").addEventListener("click", function () {
+document.querySelector(".open").addEventListener("click", function() {
   document.querySelector(".sidebar-body").style.display = "block";
 });
 
@@ -20,4 +20,22 @@ patientForm.addEventListener("submit", (e) => {
   });
 
   console.log(patientDataObj);
+  // 127.0.0.1:3000
+
+  fetch("http://127.0.0.1:3000/api/v1/examines", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(patientDataObj),
+  }).then(res => res.json()).then(data => console.log(data));
+
+  // ai 
+  fetch("http://127.0.0.1:5000/predict", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(patientDataObj),
+  }).then(res => res.json()).then(data => console.log(data));
 });
