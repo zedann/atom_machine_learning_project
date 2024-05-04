@@ -9,7 +9,7 @@ document.querySelector(".open").addEventListener("click", function() {
 });
 
 const patientForm = document.getElementById("patient-form");
-patientForm.addEventListener("submit", (e) => {
+patientForm.addEventListener("submit", async (e) => {
   e.preventDefault();
   const patientData = new FormData(patientForm);
 
@@ -22,6 +22,19 @@ patientForm.addEventListener("submit", (e) => {
   console.log(patientDataObj);
   // 127.0.0.1:3000
 
+
+  // ai
+  const predicted = await predict();
+  patientDataObj['result'] = predicted;
+  /*
+  * if user logged/exist
+  * add patientDataObj[user] = id;
+  *
+  * */
+
+  if (localStorage.getItem('userId')) {
+    patientDataObj['user'] = localStorage.getItem('user');
+  }
   fetch("http://127.0.0.1:3000/api/v1/examines", {
     method: "POST",
     headers: {
@@ -30,12 +43,20 @@ patientForm.addEventListener("submit", (e) => {
     body: JSON.stringify(patientDataObj),
   }).then(res => res.json()).then(data => console.log(data));
 
-  // ai 
-  fetch("http://127.0.0.1:5000/predict", {
+});
+
+async function predict() {
+  const res = await fetch("http://127.0.0.1:5000/predict", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(patientDataObj),
-  }).then(res => res.json()).then(data => console.log(data));
-});
+  });
+
+  const data = await res.json();
+
+  console.log(data);
+
+  return data;
+}
