@@ -17,6 +17,9 @@ body {
   background-color: var(--main-color);
   min-width: 640px !important;
 }
+body::-webkit-scrollbar {
+  display: none;
+}
 
 .container {
   max-width: 768px;
