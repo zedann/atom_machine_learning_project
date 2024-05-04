@@ -129,21 +129,21 @@
         </div>
         <div>
           <div>
-            <label for="BMIcategory">BMI category</label>
+            <label for="BMI-category">BMI category</label>
           </div>
-          <input name="bmi" type="number">
+          <input type="number" name="BMI-category" id="BMI-category">
         </div>
         <div>
           <div>
-            <label for="How many hours on average do you sleep?">How many hours on average do you sleep?</label>
+            <label for="sleep-hours">How many hours on average do you sleep?</label>
           </div>
-          <input type="number" min="1" />
+          <input type="number" min="1" id="sleep-hours" name="sleep-hours">
         </div>
         <div>
           <div>
-            <label for="How can you define your general health?">How can you define your general health?</label>
+            <label for="general-health">How can you define your general health?</label>
           </div>
-          <select name="How can you define your general health?" id="How can you define your general health?">
+          <select name="general-health" id="general-health">
             <option value="Excellent" selected>Excellent</option>
             <option value="Fair">Fair</option>
             <option value="Good">Good</option>
@@ -153,69 +153,106 @@
         </div>
         <div>
           <div>
-            <label for="race">During the past month, other than your regular job, did you participate in any physical activities or exercis
+            <label for="exercis">During the past month, other than your regular job, did you participate in any physical activities or exercis
               es such as running, calisthenics, golf, gardening, or walking for exercise?</label>
           </div>
-          <select name="Have you smoked at least 100 cigarettes in your entire life (approx. 5 packs)?)"
-            id="Have you smoked at least 100 cigarettes in your entire life (approx. 5 packs)?)">
-            <option value="" selected>No</option>
+          <select name="exercis"
+            id="exercis">
+            <option value="No" selected>No</option>
             <option value="Yes">Yes</option>
           </select>
         </div>
         <div>
           <div>
-            <label for="race">Now thinking about your physical health, which includes physical illness and injury, for how many days
+            <label for="physical-health">Now thinking about your physical health, which includes physical illness and injury, for how many days
               during the past 30 days was your physical health not good?</label>
           </div>
-          <input type="number" min="1" max="30">
+          <input type="number" min="1" max="30" id="physical-health" name="physical-health">
         </div>
         <div>
           <div>
-            <label for="race">Now thinking about your mental health, which includes stress, depression, and problems with emotions,
+            <label for="mental-health">Now thinking about your mental health, which includes stress, depression, and problems with emotions,
               for how many days during the past 30 days was your mental health not good?</label>
           </div>
-          <input type="number" min="1" max="30">
+          <input type="number" min="1" max="30" id="mental-health" name="mental-health">
         </div>
         <div>
           <div>
-            <label for="race">On average, how many hours of sleep do you get in a 24-hour period?</label>
+            <label for="sleep-hours">On average, how many hours of sleep do you get in a 24-hour period?</label>
           </div>
-          <input type="number" min="1" max="30">
+          <input type="number" min="1" max="30" name="sleep-hours" id="sleep-hours">
         </div>
         <div>
           <div>
-            <label for="race">Do you have serious difficulty walking or climbing stairs?</label>
+            <label for="walking-difficulty">Do you have serious difficulty walking or climbing stairs?</label>
           </div>
-          <select name="Have you smoked at least 100 cigarettes in your entire life (approx. 5 packs)?)"
-            id="Have you smoked at least 100 cigarettes in your entire life (approx. 5 packs)?)">
-            <option value="" selected>No</option>
+          <select name="walking-difficulty"
+            id="walking-difficulty">
+            <option value="No" selected>No</option>
             <option value="Yes">Yes</option>
           </select>
         </div>
         <div>
           <div>
-            <label for="How can you define your general health?">What is your Smoking Status?</label>
+            <label for="smoking-status">What is your Smoking Status?</label>
           </div>
-          <select name="How can you define your general health?" id="How can you define your general health?">
-            <option value="Excellent" selected>Never smoked</option>
-            <option value="Fair">No</option>
-            <option value="Good">Former smoker</option>
-            <option value="Poor">Yes</option>
-            <option value="Very good">Current smoker - now smokes some days</option>
-            <option value="Very good">Current smoker - now smokes every day</option>
+          <select name="smoking-status" id="smoking-status">
+            <option value="Never smoked" selected>Never smoked</option>
+            <option value="No">No</option>
+            <option value="Former smoker">Former smoker</option>
+            <option value="Yes">Yes</option>
+            <option value="Current smoker now smokes some days">Current smoker - now smokes some days</option>
+            <option value="Current smoker now smokes every day">Current smoker - now smokes every day</option>
           </select>
         </div>
         <div>
           <div>
-            <label for="race">Are you an Adults who have had at least one drink of alcohol in the past 30 days.?</label>
+            <label for="drink-alcohol">Are you an Adults who have had at least one drink of alcohol in the past 30 days.?</label>
           </div>
-          <select name="Have you smoked at least 100 cigarettes in your entire life (approx. 5 packs)?)"
+          <select name="drink-alcohol"
             id="Have you smoked at least 100 cigarettes in your entire life (approx. 5 packs)?)">
-            <option value="" selected>No</option>
+            <option value="No" selected>No</option>
             <option value="Yes">Yes</option>
           </select>
         </div>
-        
+        <div>
+          <label for="kidney-stones">Not including kidney stones, bladder infection or incontinence, were you ever told you had kidney disease?</label>
+          <select name="kidney-stones" id="kidney-stones">
+            <option value="No">No</option>
+            <option value="yes">Yes</option>
+          </select>
+        </div>
+        <div>
+          <label for="asthma">Were you ever told you had asthma?</label>
+          <select name="asthma" id="asthma">
+            <option value="No">No</option>
+            <option value="Yes">Yes</option>
+          </select>
+        </div>
+        <div>
+          <label for="skin-cancer">Were you ever told you had skin cancer that is not melanoma?</label>
+          <select name="skin-cancer" id="skin-cancer">
+            <option value="No">No</option>
+            <option value="Yes">Yes</option>
+          </select>
+        </div>
+        <div>
+          <label for="kidney-disease">Not including kidney stones, bladder infection or incontinence, were you ever told you had kidney
+            disease?</label>
+            <select name="kidney-disease" id="kidney-disease">
+              <option value="No">No</option>
+              <option value="Yes">Yes</option>
+            </select>
+        </div>
+        <div>
+          <label for="diabetes">Were you ever told you had diabetes?</label>
+          <select name="diabetes" id="diabetes">
+            <option value="No">No</option>
+            <option value="No-borderline diabetes">No (borderline diabetes)</option>
+            <option value="Yes">Yes</option>
+            <option value="Yes-during pregnancy">Yes (during pregnancy)</option>
+          </select>
+        </div>
       </form>
     </div>
   </main>
