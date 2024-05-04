@@ -105,10 +105,6 @@
           <select name="Sex" id="Sex">
             <option value="Male" selected>Male</option>
             <option value="Female">Female</option>
-            <option value="Black">Black</option>
-            <option value="Hispanic">Hispanic</option>
-            <option value="Other">Other</option>
-            <option value="White">White</option>
           </select>
         </div>
         <div>
@@ -135,16 +131,7 @@
           <div>
             <label for="BMIcategory">BMI category</label>
           </div>
-          <select name="BMIcategory" id="BMIcategory">
-            <option value="Normal weight (18.5 <= BMI < 25.0)" selected>
-              Normal weight (18.5 <= BMI < 25.0) </option>
-            <option value="Obese (30.0 <= BMI < +Inf)">
-              Obese (30.0 <= BMI < +Inf) </option>
-            <option value="Overweight (25.0 <= BMI < 30.0)">
-              Overweight (25.0 <= BMI < 30.0) </option>
-            <option value="Underweight (BMI < 18.5)">
-              Underweight (BMI < 18.5) </option>
-          </select>
+          <input name="bmi" type="number">
         </div>
         <div>
           <div>
@@ -166,36 +153,8 @@
         </div>
         <div>
           <div>
-            <label for="For how many days during the past 30 days was your mental health not good?">For how many days
-              during the past 30 days was your physical
-              health not good?</label>
-          </div>
-          <input type="number" name="" id="" min="1" />
-        </div>
-        <div>
-          <div>
-            <label for="For how many days during the past 30 days was your mental health not good?">For how many days
-              during the past 30 days was your mental
-              health not good?</label>
-          </div>
-          <input type="number" name="" id="" min="1" />
-        </div>
-        <div>
-          <div>
-            <label for="Have you played any sports (running, biking, etc.) in the past month?">Have you played any
-              sports (running, biking, etc.) in the past
-              month?</label>
-          </div>
-          <select name="Have you played any sports (running, biking, etc.) in the past month?"
-            id="Have you played any sports (running, biking, etc.) in the past month?">
-            <option value="No" selected>No</option>
-            <option value="Yes">Yes</option>
-          </select>
-        </div>
-        <div>
-          <div>
-            <label for="race">Have you smoked at least 100 cigarettes in your entire life
-              (approx. 5 packs)?)</label>
+            <label for="race">During the past month, other than your regular job, did you participate in any physical activities or exercis
+              es such as running, calisthenics, golf, gardening, or walking for exercise?</label>
           </div>
           <select name="Have you smoked at least 100 cigarettes in your entire life (approx. 5 packs)?)"
             id="Have you smoked at least 100 cigarettes in your entire life (approx. 5 packs)?)">
@@ -205,73 +164,58 @@
         </div>
         <div>
           <div>
-            <label for="Do you have more than 14 drinks of alcohol (men) or more than 7 (women) in a week?">Do you have
-              more than 14 drinks of alcohol (men) or more than 7
-              (women) in a week?"
-            </label>
+            <label for="race">Now thinking about your physical health, which includes physical illness and injury, for how many days
+              during the past 30 days was your physical health not good?</label>
           </div>
-          <select name="Do you have more than 14 drinks of alcohol (men) or more than 7 (women) in a week?"
-            id="Do you have more than 14 drinks of alcohol (men) or more than 7 (women) in a week?">
+          <input type="number" min="1" max="30">
+        </div>
+        <div>
+          <div>
+            <label for="race">Now thinking about your mental health, which includes stress, depression, and problems with emotions,
+              for how many days during the past 30 days was your mental health not good?</label>
+          </div>
+          <input type="number" min="1" max="30">
+        </div>
+        <div>
+          <div>
+            <label for="race">On average, how many hours of sleep do you get in a 24-hour period?</label>
+          </div>
+          <input type="number" min="1" max="30">
+        </div>
+        <div>
+          <div>
+            <label for="race">Do you have serious difficulty walking or climbing stairs?</label>
+          </div>
+          <select name="Have you smoked at least 100 cigarettes in your entire life (approx. 5 packs)?)"
+            id="Have you smoked at least 100 cigarettes in your entire life (approx. 5 packs)?)">
             <option value="" selected>No</option>
             <option value="Yes">Yes</option>
           </select>
         </div>
         <div>
           <div>
-            <label for="Did you have a stroke?">Did you have a stroke?"</label>
+            <label for="How can you define your general health?">What is your Smoking Status?</label>
           </div>
-          <select name="Did you have a stroke?" id="Did you have a stroke?">
-            <option value="" selected>No</option>
-            <option value="Yes">Yes</option>
+          <select name="How can you define your general health?" id="How can you define your general health?">
+            <option value="Excellent" selected>Never smoked</option>
+            <option value="Fair">No</option>
+            <option value="Good">Former smoker</option>
+            <option value="Poor">Yes</option>
+            <option value="Very good">Current smoker - now smokes some days</option>
+            <option value="Very good">Current smoker - now smokes every day</option>
           </select>
         </div>
         <div>
           <div>
-            <label for="race">Do you have serious difficulty walking or climbing
-              stairs?</label>
+            <label for="race">Are you an Adults who have had at least one drink of alcohol in the past 30 days.?</label>
           </div>
-          <select name="Do you have serious difficulty walking or climbing stairs?"
-            id="Do you have serious difficulty walking or climbing stairs?">
+          <select name="Have you smoked at least 100 cigarettes in your entire life (approx. 5 packs)?)"
+            id="Have you smoked at least 100 cigarettes in your entire life (approx. 5 packs)?)">
             <option value="" selected>No</option>
             <option value="Yes">Yes</option>
           </select>
         </div>
-        <div>
-          <div>
-            <label for="Have you ever had diabetes?">Have you ever had diabetes?</label>
-          </div>
-          <select name="Have you ever had diabetes?" id="Have you ever had diabetes?">
-            <option value="" selected>No</option>
-            <option value="Yes">Yes</option>
-          </select>
-        </div>
-        <div>
-          <div>
-            <label for="race">Do you have asthma?</label>
-          </div>
-          <select name="Do you have asthma?" id="Do you have asthma?">
-            <option value="" selected>No</option>
-            <option value="Yes">Yes</option>
-          </select>
-        </div>
-        <div>
-          <div>
-            <label for="race">Do you have kidney disease?</label>
-          </div>
-          <select name="Do you have kidney disease?" id="Do you have kidney disease?">
-            <option value="" selected>No</option>
-            <option value="Yes">Yes</option>
-          </select>
-        </div>
-        <div>
-          <div>
-            <label for="race">Do you have skin cancer?</label>
-          </div>
-          <select name="Do you have skin cancer?" id="Do you have skin cancer?">
-            <option value="" selected>No</option>
-            <option value="Yes">Yes</option>
-          </select>
-        </div>
+        
       </form>
     </div>
   </main>
