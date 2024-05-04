@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require("path");
 const mongoSanitize = require("express-mongo-sanitize");
 const xss = require("xss-clean");
 const globalError = require("./middlewares/errorMiddleware");
@@ -17,9 +18,12 @@ if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
   console.log(`Mode : ${process.env.NODE_ENV}`);
 }
+app.set("view engine", "pug");
+app.set("views", path.join(__dirname, "views"));
 // parse request body
 app.use(express.json((limit = "20kb")));
-
+// Serving static files
+app.use(express.static(path.join(__dirname, "public")));
 // enable cors
 app.use(cors());
 
@@ -35,12 +39,11 @@ const limiter = rateLimit({
 // To remove data using these defaults:
 app.use(mongoSanitize());
 
-// Or, to replace these prohibited characters with _, use:
-app.use(
-  mongoSanitize({
-    replaceWith: "_",
-  })
-);
+// app.use(
+//   mongoSanitize({
+//     replaceWith: "_",
+//   })
+// );
 // prevent xss attacks
 app.use(xss());
 
