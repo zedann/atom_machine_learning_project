@@ -17,11 +17,13 @@ body {
   background-color: var(--main-color);
   min-width: 640px !important;
 }
+body::-webkit-scrollbar {
+  display: none;
+}
 
 .container {
   max-width: 768px;
   margin: 0 auto;
-  margin-left: 570px;
 }
 
 main .sidebar-body {
@@ -56,7 +58,7 @@ main .sidebar-body form input {
   border-radius: 4px;
   width: 310px;
   background: var(--main-color);
-  color: #fff;
+  color: #FFF;
   margin-bottom: 24px;
 }
 main .sidebar-body::-webkit-scrollbar {
@@ -65,6 +67,7 @@ main .sidebar-body::-webkit-scrollbar {
 main .sidebar-body::-webkit-scrollbar {
   display: none !important;
 }
+
 
 .Bo {
   display: inline-flex;
@@ -152,6 +155,10 @@ span.open {
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
+}
+
+.cont-box {
+  margin-left: 20px;
 }
 
 @media (max-width: 1460px) {

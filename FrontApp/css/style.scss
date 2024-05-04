@@ -16,6 +16,10 @@ body {
   color: rgb(250, 250, 250);
   background-color: var(--main-color);
   min-width: 640px !important;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .container {
@@ -173,8 +177,12 @@ span.open {
   -o-border-radius: 4px;
 }
 
+.cont-box {
+  margin-left: 20px;
+}
+
 @media(max-width:1460px) {
   .sidebar-body {
-    display: none ;
+    display: none;
   }
 }
