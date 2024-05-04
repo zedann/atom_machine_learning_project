@@ -21,6 +21,7 @@ body {
 .container {
   max-width: 768px;
   margin: 0 auto;
+  margin-left: 570px;
 }
 
 main .sidebar-body {
@@ -55,7 +56,7 @@ main .sidebar-body form input {
   border-radius: 4px;
   width: 310px;
   background: var(--main-color);
-  color: #FFF;
+  color: #fff;
   margin-bottom: 24px;
 }
 main .sidebar-body::-webkit-scrollbar {
@@ -64,7 +65,6 @@ main .sidebar-body::-webkit-scrollbar {
 main .sidebar-body::-webkit-scrollbar {
   display: none !important;
 }
-
 
 .Bo {
   display: inline-flex;
