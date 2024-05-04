@@ -35,14 +35,17 @@ patientForm.addEventListener("submit", async (e) => {
   if (localStorage.getItem('userId')) {
     patientDataObj['user'] = localStorage.getItem('user');
   }
-  fetch("http://127.0.0.1:3000/api/v1/examines", {
+  const resToBackEnd = fetch("http://127.0.0.1:3000/api/v1/examines", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(patientDataObj),
-  }).then(res => res.json()).then(data => console.log(data));
+  });
 
+  const dataFromBackend = await resToBackEnd.json();
+
+  console.log(dataFromBackend);
 });
 
 async function predict() {
