@@ -5,92 +5,47 @@ const examineSchema = new mongoose.Schema(
     Sex: {
       type: String,
     },
-    GeneralHealth: {
-      type: String,
-    },
-    PhysicalHealthDays: {
-      type: Number,
-    },
-    MentalHealthDays: {
-      type: Number,
-    },
-    DifficultyConcentrating: {
-      type: String,
-      enum: ["Yes", "No"],
-    },
-    DifficultyWalking: {
-      type: String,
-      enum: ["Yes", "No"],
-    },
-    DifficultySleeping: {
-      type: String,
-      enum: ["Yes", "No"],
-    },
-    DifficultyDressingBathing: {
-      type: String,
-      enum: ["Yes", "No"],
-    },
-    DifficultyErrands: {
-      type: String,
-      enum: ["Yes", "No"],
-    },
-    SmokerStatus: {
-      type: String,
-    },
-    ECigaretteUsage: {
-      type: String,
-    },
-    AgeCategory: {
-      type: String,
-    },
-    HeightInMeters: {
-      type: Number,
-    },
-    WeightInKilograms: {
-      type: Number,
-    },
     BMI: {
       type: Number,
     },
-    HadAsthma: {
+    GenHealth: {
       type: String,
-      enum: ["Yes", "No"],
     },
-    HadSkinCancer: {
+    PhysicalActivity: {
       type: String,
-      enum: ["Yes", "No"],
     },
-    HadCOPD: {
-      type: String,
-      enum: ["Yes", "No"],
+    PhysicalHealth: {
+      type: Number,
     },
-    HadDepressiveDisorder: {
-      type: String,
-      enum: ["Yes", "No"],
+    MentalHealth: {
+      type: Number,
     },
-    HadKidneyDisease: {
-      type: String,
-      enum: ["Yes", "No"],
+    SleepTime: {
+      type: Number,
     },
-    HadArthritis: {
+    DiffWalking: {
       type: String,
-      enum: ["Yes", "No"],
     },
-    HadDiabetes: {
+    Smoking: {
       type: String,
-      enum: ["Yes", "No"],
     },
-    DeafOrHardOfHearing: {
+    AlcoholDrinking: {
       type: String,
-      enum: ["Yes", "No"],
     },
-    BlindOrVisionDifficulty: {
+    KidneyDisease: {
       type: String,
-      enum: ["Yes", "No"],
     },
-    CovidPos: {
+    Asthma: {
       type: String,
-      enum: ["Yes", "No"],
+    },
+    SkinCancer: {
+      type: String,
+    },
+    Stroke: {
+      type: String,
+    },
+    Diabetic: {
+      type: String,
     },
     result: {
       type: Number,

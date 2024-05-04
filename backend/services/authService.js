@@ -4,7 +4,7 @@ const jwt = require("jsonwebtoken");
 const User = require("./../models/userModel");
 const asyncHandler = require("express-async-handler");
 const ApiError = require("./../utils/apiError");
-// const Email = require("./../utils/email");
+const Email = require("./../utils/email");
 
 const signToken = require("../utils/createToken");
 
@@ -33,17 +33,11 @@ const createSendToken = (user, statusCode, res) => {
 };
 
 exports.signup = asyncHandler(async (req, res, next) => {
-  const newUser = await User.create({
-    name: req.body.name,
-    email: req.body.email,
-    password: req.body.password,
-    passwordConfirm: req.body.passwordConfirm,
-    phone: req.body.phone,
-  });
+  const newUser = await User.create(req.body);
 
-  //   const url = `${req.protocol}://${req.get("host")}/me`;
-  //   console.log(url);
-  //   await new Email(newUser, url).sendWelcome();
+  const url = `${req.protocol}://${req.get("host")}/me`;
+  console.log(url);
+  await new Email(newUser, url).sendWelcome();
 
   createSendToken(newUser, 201, res);
 });
