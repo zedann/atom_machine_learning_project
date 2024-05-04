@@ -15,248 +15,256 @@
   <main>
     <div class="body">
       <div class="container">
-        <h1 class="head">Heart Disease prediction <span class="open">Open Feature Selection</span></h1>
+        <div class="cont-box">
+          <h1 class="head">Heart Disease prediction <span class="open">Open Feature Selection</span></h1>
 
-        <h2 class="h2">
-          Are you wondering about the condition of your heart? This <br> app will help
-          you to diagonise it!
-        </h2>
-        <div class="cont">
+          <h2 class="h2">
+            Are you wondering about the condition of your heart? This <br> app will help
+            you to diagonise it!
+          </h2>
+          <div class="cont">
 
-          <div class="ph">
-            <img class="photo" src="./img/d2.png" alt="Loading">
-            <p class="last">I'll help you diagnose your heart health! <br> - Dr. Logistic Regression</p>
-            
+            <div class="ph">
+              <img class="photo" src="./img/d2.png" alt="Loading">
+              <p class="last">I'll help you diagnose your heart health! <br> - Dr. Logistic Regression</p>
+
+            </div>
+            <div class="Di">
+              <p>
+                Did you know that machine learning models can help you predict heart
+                disease pretty accurately? In this app, you can estimate your chance of
+                heart disease (yes/no) in seconds!
+                <br>
+                Here, a logistic regression model using an undersampling technique was
+                constructed using survey data of over 300k US residents from the year
+                2020. This application is based on it because it has proven to be better
+                than the random forest (it achieves an accuracy of about 80%, which is
+                quite good).
+                To predict your heart disease status, simply follow the steps bellow:
+                <br>
+                <br>
+              <ol type="1">
+                <li>Enter the parameters that best describe you;</li>
+                <li>Press the "Predict" button and wait for the result.</li>
+              </ol>
+              <br>
+              <h4>
+                Keep in mind that this results is not equivalent to a medical diagnosis! This
+                model would never be adopted by health care facilities because of its less
+                than perfect accuracy, so if you have any problems, consult a human doctor.
+              </h4>
+              </p>
+              <br>
+              <p>
+                Author: Kamil Pytlak(<a class="link"
+                  href="https://github.com/kamilpytlak/heart-condition-checker">Github</a>)
+              </p>
+              <br>
+              <p>
+                You can see the steps of building the model, evaluating it, and cleaning
+                the data itself on my GitHub repo
+                <a class="link"
+                  href="https://github.com/kamilpytlak/data-analyses/tree/main/heart-disease-prediction">Here</a>.
+              </p>
+            </div>
+
           </div>
-          <div class="Di">
-            <p>
-              Did you know that machine learning models can help you predict heart
-              disease pretty accurately? In this app, you can estimate your chance of
-              heart disease (yes/no) in seconds!
-              <br>
-              Here, a logistic regression model using an undersampling technique was
-              constructed using survey data of over 300k US residents from the year
-              2020. This application is based on it because it has proven to be better
-              than the random forest (it achieves an accuracy of about 80%, which is
-              quite good).
-              To predict your heart disease status, simply follow the steps bellow:
-              <br>
-              <br>
-            <ol type="1">
-              <li>Enter the parameters that best describe you;</li>
-              <li>Press the "Predict" button and wait for the result.</li>
-            </ol>
-            <br>
-            <h4>
-              Keep in mind that this results is not equivalent to a medical diagnosis! This
-              model would never be adopted by health care facilities because of its less
-              than perfect accuracy, so if you have any problems, consult a human doctor.
-            </h4>
-            </p>
-            <br>
-            <p>
-              Author: Kamil Pytlak(<a class="link"
-                href="https://github.com/kamilpytlak/heart-condition-checker">Github</a>)
-            </p>
-            <br>
-            <p>
-              You can see the steps of building the model, evaluating it, and cleaning
-              the data itself on my GitHub repo
-              <a class="link"
-                href="https://github.com/kamilpytlak/data-analyses/tree/main/heart-disease-prediction">Here</a>.
-            </p>
-          </div>
-
         </div>
       </div>
-    </div>
-    <div class="sidebar-body">
-      <div class="close">
-        <svg xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-          <path
-            d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
-        </svg>
-      </div>
-      <div class="heaeder-sidebar">
-        <h3>Feature Selection</h3>
-        <img src="./img/heart.png" alt="heart" />
-      </div>
-      <form id="patient-form">
-        <div>
+      <div class="sidebar-body">
+        <div class="close">
+          <svg xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path
+              d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+          </svg>
+        </div>
+        <div class="heaeder-sidebar">
+          <h3>Feature Selection</h3>
+          <img src="./img/heart.png" alt="heart" />
+        </div>
+        <form id="patient-form">
           <div>
-            <label for="race">Race</label>
+            <div>
+              <label for="race">Race</label>
+            </div>
+            <select name="Race" id="race">
+              <option value="American Indian/Alaskan Native" selected>
+                American Indian/Alaskan Native
+              </option>
+              <option value="Asian">Asian</option>
+              <option value="Black">Black</option>
+              <option value="Hispanic">Hispanic</option>
+              <option value="Other">Other</option>
+              <option value="White">White</option>
+            </select>
           </div>
-          <select name="Race" id="race">
-            <option value="American Indian/Alaskan Native" selected>
-              American Indian/Alaskan Native
-            </option>
-            <option value="Asian">Asian</option>
-            <option value="Black">Black</option>
-            <option value="Hispanic">Hispanic</option>
-            <option value="Other">Other</option>
-            <option value="White">White</option>
-          </select>
-        </div>
-        <div>
           <div>
-            <label for="Sex">Sex</label>
+            <div>
+              <label for="Sex">Sex</label>
+            </div>
+            <select name="Sex" id="Sex">
+              <option value="Male" selected>Male</option>
+              <option value="Female">Female</option>
+            </select>
           </div>
-          <select name="Sex" id="Sex">
-            <option value="Male" selected>Male</option>
-            <option value="Female">Female</option>
-          </select>
-        </div>
-        <div>
           <div>
-            <label for="Agecategory">Age category</label>
+            <div>
+              <label for="Agecategory">Age category</label>
+            </div>
+
+            <select name="Agecategory" id="Agecategory">
+              <option value="18-24" selected>18-24</option>
+              <option value="25-29">25-29</option>
+              <option value="30-34">30-34</option>
+              <option value="35-39">35-39</option>
+              <option value="40-44">40-44</option>
+              <option value="45-49">45-49</option>
+              <option value="50-54">50-54</option>
+              <option value="55-59">55-59</option>
+              <option value="60-64">60-64</option>
+              <option value="65-69">65-69</option>
+              <option value="70-74">70-74</option>
+              <option value="75-79">75-79</option>
+              <option value="80 or older">80 or older</option>
+            </select>
           </div>
-          
-          <select name="Agecategory" id="Agecategory">
-            <option value="18-24" selected>18-24</option>
-            <option value="25-29">25-29</option>
-            <option value="30-34">30-34</option>
-            <option value="35-39">35-39</option>
-            <option value="40-44">40-44</option>
-            <option value="45-49">45-49</option>
-            <option value="50-54">50-54</option>
-            <option value="55-59">55-59</option>
-            <option value="60-64">60-64</option>
-            <option value="65-69">65-69</option>
-            <option value="70-74">70-74</option>
-            <option value="75-79">75-79</option>
-            <option value="80 or older">80 or older</option>
-          </select>
-        </div>
-        <div>
           <div>
-            <label for="BMI-category">BMI category</label>
+            <div>
+              <label for="BMI-category">BMI category</label>
+            </div>
+            <input type="number" name="BMI-category" id="BMI-category">
           </div>
-          <input type="number" name="BMI-category" id="BMI-category">
-        </div>
-        <div>
           <div>
-            <label for="sleep-hours">How many hours on average do you sleep?</label>
+            <div>
+              <label for="sleep-hours">How many hours on average do you sleep?</label>
+            </div>
+            <input type="number" min="1" id="sleep-hours" name="sleep-hours">
           </div>
-          <input type="number" min="1" id="sleep-hours" name="sleep-hours">
-        </div>
-        <div>
           <div>
-            <label for="general-health">How can you define your general health?</label>
+            <div>
+              <label for="general-health">How can you define your general health?</label>
+            </div>
+            <select name="general-health" id="general-health">
+              <option value="Excellent" selected>Excellent</option>
+              <option value="Fair">Fair</option>
+              <option value="Good">Good</option>
+              <option value="Poor">Poor</option>
+              <option value="Very good">Very good</option>
+            </select>
           </div>
-          <select name="general-health" id="general-health">
-            <option value="Excellent" selected>Excellent</option>
-            <option value="Fair">Fair</option>
-            <option value="Good">Good</option>
-            <option value="Poor">Poor</option>
-            <option value="Very good">Very good</option>
-          </select>
-        </div>
-        <div>
           <div>
-            <label for="exercis">During the past month, other than your regular job, did you participate in any physical activities or exercis
-              es such as running, calisthenics, golf, gardening, or walking for exercise?</label>
+            <div>
+              <label for="exercis">During the past month, other than your regular job, did you participate in any
+                physical
+                activities or exercis
+                es such as running, calisthenics, golf, gardening, or walking for exercise?</label>
+            </div>
+            <select name="exercis" id="exercis">
+              <option value="No" selected>No</option>
+              <option value="Yes">Yes</option>
+            </select>
           </div>
-          <select name="exercis"
-            id="exercis">
-            <option value="No" selected>No</option>
-            <option value="Yes">Yes</option>
-          </select>
-        </div>
-        <div>
           <div>
-            <label for="physical-health">Now thinking about your physical health, which includes physical illness and injury, for how many days
-              during the past 30 days was your physical health not good?</label>
+            <div>
+              <label for="physical-health">Now thinking about your physical health, which includes physical illness and
+                injury, for how many days
+                during the past 30 days was your physical health not good?</label>
+            </div>
+            <input type="number" min="1" max="30" id="physical-health" name="physical-health">
           </div>
-          <input type="number" min="1" max="30" id="physical-health" name="physical-health">
-        </div>
-        <div>
           <div>
-            <label for="mental-health">Now thinking about your mental health, which includes stress, depression, and problems with emotions,
-              for how many days during the past 30 days was your mental health not good?</label>
+            <div>
+              <label for="mental-health">Now thinking about your mental health, which includes stress, depression, and
+                problems with emotions,
+                for how many days during the past 30 days was your mental health not good?</label>
+            </div>
+            <input type="number" min="1" max="30" id="mental-health" name="mental-health">
           </div>
-          <input type="number" min="1" max="30" id="mental-health" name="mental-health">
-        </div>
-        <div>
           <div>
-            <label for="sleep-hours">On average, how many hours of sleep do you get in a 24-hour period?</label>
+            <div>
+              <label for="sleep-hours">On average, how many hours of sleep do you get in a 24-hour period?</label>
+            </div>
+            <input type="number" min="1" max="30" name="sleep-hours" id="sleep-hours">
           </div>
-          <input type="number" min="1" max="30" name="sleep-hours" id="sleep-hours">
-        </div>
-        <div>
           <div>
-            <label for="walking-difficulty">Do you have serious difficulty walking or climbing stairs?</label>
+            <div>
+              <label for="walking-difficulty">Do you have serious difficulty walking or climbing stairs?</label>
+            </div>
+            <select name="walking-difficulty" id="walking-difficulty">
+              <option value="No" selected>No</option>
+              <option value="Yes">Yes</option>
+            </select>
           </div>
-          <select name="walking-difficulty"
-            id="walking-difficulty">
-            <option value="No" selected>No</option>
-            <option value="Yes">Yes</option>
-          </select>
-        </div>
-        <div>
           <div>
-            <label for="smoking-status">What is your Smoking Status?</label>
+            <div>
+              <label for="smoking-status">What is your Smoking Status?</label>
+            </div>
+            <select name="smoking-status" id="smoking-status">
+              <option value="Never smoked" selected>Never smoked</option>
+              <option value="No">No</option>
+              <option value="Former smoker">Former smoker</option>
+              <option value="Yes">Yes</option>
+              <option value="Current smoker now smokes some days">Current smoker - now smokes some days</option>
+              <option value="Current smoker now smokes every day">Current smoker - now smokes every day</option>
+            </select>
           </div>
-          <select name="smoking-status" id="smoking-status">
-            <option value="Never smoked" selected>Never smoked</option>
-            <option value="No">No</option>
-            <option value="Former smoker">Former smoker</option>
-            <option value="Yes">Yes</option>
-            <option value="Current smoker now smokes some days">Current smoker - now smokes some days</option>
-            <option value="Current smoker now smokes every day">Current smoker - now smokes every day</option>
-          </select>
-        </div>
-        <div>
           <div>
-            <label for="drink-alcohol">Are you an Adults who have had at least one drink of alcohol in the past 30 days.?</label>
+            <div>
+              <label for="drink-alcohol">Are you an Adults who have had at least one drink of alcohol in the past 30
+                days.?</label>
+            </div>
+            <select name="drink-alcohol"
+              id="Have you smoked at least 100 cigarettes in your entire life (approx. 5 packs)?)">
+              <option value="No" selected>No</option>
+              <option value="Yes">Yes</option>
+            </select>
           </div>
-          <select name="drink-alcohol"
-            id="Have you smoked at least 100 cigarettes in your entire life (approx. 5 packs)?)">
-            <option value="No" selected>No</option>
-            <option value="Yes">Yes</option>
-          </select>
-        </div>
-        <div>
-          <label for="kidney-stones">Not including kidney stones, bladder infection or incontinence, were you ever told you had kidney disease?</label>
-          <select name="kidney-stones" id="kidney-stones">
-            <option value="No">No</option>
-            <option value="yes">Yes</option>
-          </select>
-        </div>
-        <div>
-          <label for="asthma">Were you ever told you had asthma?</label>
-          <select name="asthma" id="asthma">
-            <option value="No">No</option>
-            <option value="Yes">Yes</option>
-          </select>
-        </div>
-        <div>
-          <label for="skin-cancer">Were you ever told you had skin cancer that is not melanoma?</label>
-          <select name="skin-cancer" id="skin-cancer">
-            <option value="No">No</option>
-            <option value="Yes">Yes</option>
-          </select>
-        </div>
-        <div>
-          <label for="kidney-disease">Not including kidney stones, bladder infection or incontinence, were you ever told you had kidney
-            disease?</label>
+          <div>
+            <label for="kidney-stones">Not including kidney stones, bladder infection or incontinence, were you ever
+              told
+              you had kidney disease?</label>
+            <select name="kidney-stones" id="kidney-stones">
+              <option value="No">No</option>
+              <option value="yes">Yes</option>
+            </select>
+          </div>
+          <div>
+            <label for="asthma">Were you ever told you had asthma?</label>
+            <select name="asthma" id="asthma">
+              <option value="No">No</option>
+              <option value="Yes">Yes</option>
+            </select>
+          </div>
+          <div>
+            <label for="skin-cancer">Were you ever told you had skin cancer that is not melanoma?</label>
+            <select name="skin-cancer" id="skin-cancer">
+              <option value="No">No</option>
+              <option value="Yes">Yes</option>
+            </select>
+          </div>
+          <div>
+            <label for="kidney-disease">Not including kidney stones, bladder infection or incontinence, were you ever
+              told
+              you had kidney
+              disease?</label>
             <select name="kidney-disease" id="kidney-disease">
               <option value="No">No</option>
               <option value="Yes">Yes</option>
             </select>
-        </div>
-        <div>
-          <label for="diabetes">Were you ever told you had diabetes?</label>
-          <select name="diabetes" id="diabetes">
-            <option value="No">No</option>
-            <option value="No-borderline diabetes">No (borderline diabetes)</option>
-            <option value="Yes">Yes</option>
-            <option value="Yes-during pregnancy">Yes (during pregnancy)</option>
-          </select>
-        </div>
-        <input class="Bo" type="submit">  </input>
-      </form>
-    </div>
+          </div>
+          <div>
+            <label for="diabetes">Were you ever told you had diabetes?</label>
+            <select name="diabetes" id="diabetes">
+              <option value="No">No</option>
+              <option value="No-borderline diabetes">No (borderline diabetes)</option>
+              <option value="Yes">Yes</option>
+              <option value="Yes-during pregnancy">Yes (during pregnancy)</option>
+            </select>
+          </div>
+          <input class="Bo" type="submit"> </input>
+        </form>
+      </div>
   </main>
   <footer></footer>
 </body>
