@@ -27,14 +27,35 @@ body {
   margin: 0 auto;
 }
 
+header{
+  background: #1e2430;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0px 0px 23px -6px red;
+    a{
+      text-decoration: none;
+      color: #FFF;;
+      font-size: 18px;
+    }
+    button{
+      background: transparent;
+      border: none;;
+      a{
+        text-decoration: underline;
+      }
+    }
+}
+
 main {
   .sidebar-body {
-    position: fixed;
+    top: 69px;
+    // border-radius: 4px;
+    position: absolute;
     background-color: rgb(38, 39, 48);
     background-attachment: fixed;
     flex-shrink: 0;
     height: calc(-2px + 100vh);
-    top: 0px;
     overflow: auto;
     padding: 6rem 1rem;
     transition: margin-left 300ms ease 0s, box-shadow 300ms ease 0s;
@@ -185,4 +206,55 @@ span.open {
   .sidebar-body {
     display: none;
   }
+}
+
+
+.h2-title {
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: -100px;
+}
+// login form
+.form {
+  margin: 150px auto;
+  width: 500px;
+
+  label {}
+
+  input,
+  button {
+    margin-block-end: 20px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    border: none;
+    outline: none;
+    background: red;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: bold;
+
+    &::placeholder {
+      color: #00000048;
+    }
+
+    &[type='submit'] {
+      // margin-top: 12px;
+      // margin-bottom: 22px;
+      cursor: pointer;
+    }
+
+    a {
+      
+      color: #FFF;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+
+
 }

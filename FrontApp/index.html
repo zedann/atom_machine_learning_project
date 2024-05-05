@@ -7,11 +7,29 @@
   <title>Atom Machine Learning</title>
   <link rel="shortcut icon" href="./img/atom.jpeg" type="image/x-icon" />
   <link rel="stylesheet" href="./css/style.css" />
-  <script src="./script/script.js" defer></script>
+
 </head>
 
 <body>
-  <header></header>
+  <header>
+    <div class="home">
+      <a href="./index.html">
+        home
+      </a>
+    </div>
+    <div class="login-signin">
+      <button>
+        <a href="./login.html">
+          Login
+        </a>
+      </button>
+      <button>
+        <a href="./signin.html">
+          SignIn
+        </a>
+      </button>
+    </div>
+  </header>
   <main>
     <div class="body">
       <div class="container">
@@ -56,15 +74,14 @@
               </p>
               <br>
               <p>
-                Author: Kamil Pytlak(<a class="link"
-                  href="https://github.com/kamilpytlak/heart-condition-checker">Github</a>)
+                Author: My Team(<a class="link"
+                  href="https://github.com/zedann/atom_machine_learning_project/tree/main/FrontApp">Github</a>)
               </p>
               <br>
               <p>
                 You can see the steps of building the model, evaluating it, and cleaning
                 the data itself on my GitHub repo
-                <a class="link"
-                  href="https://github.com/kamilpytlak/data-analyses/tree/main/heart-disease-prediction">Here</a>.
+                <a class="link" href="https://github.com/zedann/atom_machine_learning_project">Here</a>.
               </p>
             </div>
 
@@ -108,171 +125,174 @@
               <option value="80 or older">80 or older</option>
             </select>
           </div>
-        
-        <div>
+
           <div>
             <div>
-              <label for="BMI-category">BMI category</label>
+              <div>
+                <label for="BMI-category">BMI category</label>
+              </div>
+              <input type="number" name="BMI" id="BMI-category">
             </div>
-            <input type="number" name="BMI" id="BMI-category">
           </div>
-        </div>
-        <div>
           <div>
             <div>
-              <label for="sleep-hours">How many hours on average do you sleep?</label>
+              <div>
+                <label for="sleep-hours">How many hours on average do you sleep?</label>
+              </div>
+              <input type="number" min="1" id="sleep-hours" name="SleepTime">
             </div>
-            <input type="number" min="1" id="sleep-hours" name="SleepTime">
           </div>
-        </div>
-        <div>
           <div>
             <div>
-              <label for="general-health">How can you define your general health?</label>
+              <div>
+                <label for="general-health">How can you define your general health?</label>
+              </div>
+              <select name="GenHealth" id="general-health">
+                <option value="Excellent" selected>Excellent</option>
+                <option value="Fair">Fair</option>
+                <option value="Good">Good</option>
+                <option value="Poor">Poor</option>
+                <option value="Very good">Very good</option>
+              </select>
             </div>
-            <select name="GenHealth" id="general-health">
-              <option value="Excellent" selected>Excellent</option>
-              <option value="Fair">Fair</option>
-              <option value="Good">Good</option>
-              <option value="Poor">Poor</option>
-              <option value="Very good">Very good</option>
-            </select>
+
           </div>
-          
-        </div>
-        <div>
           <div>
             <div>
-              <label for="exercis">During the past month, other than your regular job, did you participate in any
-                physical
-                activities or exercis
-                es such as running, calisthenics, golf, gardening, or walking for exercise?</label>
+              <div>
+                <label for="exercis">During the past month, other than your regular job, did you participate in any
+                  physical
+                  activities or exercis
+                  es such as running, calisthenics, golf, gardening, or walking for exercise?</label>
+              </div>
+              <select name="PhysicalActivity" id="exercis">
+                <option value="No" selected>No</option>
+                <option value="Yes">Yes</option>
+              </select>
             </div>
-            <select name="PhysicalActivity"
-            id="exercis">
-            <option value="No" selected>No</option>
-            <option value="Yes">Yes</option>
-          </select>
+
           </div>
-          
-        </div>
-        <div>
           <div>
             <div>
-              <label for="physical-health">Now thinking about your physical health, which includes physical illness and
-                injury, for how many days
-                during the past 30 days was your physical health not good?</label>
+              <div>
+                <label for="physical-health">Now thinking about your physical health, which includes physical illness
+                  and
+                  injury, for how many days
+                  during the past 30 days was your physical health not good?</label>
+              </div>
+              <input type="number" min="1" max="30" id="physical-health" name="PhysicalHealth">
             </div>
-            <input type="number" min="1" max="30" id="physical-health" name="PhysicalHealth">
           </div>
-        </div>
-        <div>
           <div>
             <div>
-              <label for="mental-health">Now thinking about your mental health, which includes stress, depression, and
-                problems with emotions,
-                for how many days during the past 30 days was your mental health not good?</label>
+              <div>
+                <label for="mental-health">Now thinking about your mental health, which includes stress, depression, and
+                  problems with emotions,
+                  for how many days during the past 30 days was your mental health not good?</label>
+              </div>
+              <input type="number" min="1" max="30" id="mental-health" name="MentalHealth">
             </div>
-            <input type="number" min="1" max="30" id="mental-health" name="MentalHealth">
           </div>
-        </div>
-        
-        <div>
+
           <div>
             <div>
-              <label for="walking-difficulty">Do you have serious difficulty walking or climbing stairs?</label>
+              <div>
+                <label for="walking-difficulty">Do you have serious difficulty walking or climbing stairs?</label>
+              </div>
+              <select name="DiffWalking" id="walking-difficulty">
+                <option value="No" selected>No</option>
+                <option value="Yes">Yes</option>
+              </select>
             </div>
-            <select name="DiffWalking"
-            id="walking-difficulty">
-            <option value="No" selected>No</option>
-            <option value="Yes">Yes</option>
-          </select>
+
           </div>
-          
-        </div>
-        <div>
           <div>
             <div>
-              <label for="smoking-status">What is your Smoking Status?</label>
+              <div>
+                <label for="smoking-status">What is your Smoking Status?</label>
+              </div>
+              <select name="Smoking" id="smoking-status">
+                <option value="Never smoked" selected>Never smoked</option>
+                <option value="No">No</option>
+                <option value="Former smoker">Former smoker</option>
+                <option value="Yes">Yes</option>
+                <option value="Current smoker now smokes some days">Current smoker - now smokes some days</option>
+                <option value="Current smoker now smokes every day">Current smoker - now smokes every day</option>
+              </select>
             </div>
-            <select name="Smoking" id="smoking-status">
-              <option value="Never smoked" selected>Never smoked</option>
+
+          </div>
+          <div>
+            <div>
+              <div>
+                <label for="drink-alcohol">Are you an Adults who have had at least one drink of alcohol in the past 30
+                  days.?</label>
+              </div>
+              <select name="AlcoholDrinking"
+                id="Have you smoked at least 100 cigarettes in your entire life (approx. 5 packs)?)">
+                <option value="No" selected>No</option>
+                <option value="Yes">Yes</option>
+              </select>
+            </div>
+
+          </div>
+          <div>
+            <label for="kidney-stones">Not including kidney stones, bladder infection or incontinence, were you ever
+              told you had kidney disease?</label>
+            <select name="smoking-status" id="kidney-stones">
               <option value="No">No</option>
-              <option value="Former smoker">Former smoker</option>
-              <option value="Yes">Yes</option>
-              <option value="Current smoker now smokes some days">Current smoker - now smokes some days</option>
-              <option value="Current smoker now smokes every day">Current smoker - now smokes every day</option>
+              <option value="yes">Yes</option>
             </select>
           </div>
-          
-        </div>
-        <div>
           <div>
-            <div>
-              <label for="drink-alcohol">Are you an Adults who have had at least one drink of alcohol in the past 30
-                days.?</label>
-            </div>
-            <select name="AlcoholDrinking"
-            id="Have you smoked at least 100 cigarettes in your entire life (approx. 5 packs)?)">
-            <option value="No" selected>No</option>
-            <option value="Yes">Yes</option>
-          </select>
+            <label for="asthma">Were you ever told you had asthma?</label>
+            <select name="asthma" id="asthma">
+              <option value="No">No</option>
+              <option value="Yes">Yes</option>
+            </select>
           </div>
-          
-        </div>
-        <div>
-          <label for="kidney-stones">Not including kidney stones, bladder infection or incontinence, were you ever told you had kidney disease?</label>
-          <select name="smoking-status" id="kidney-stones">
-            <option value="No">No</option>
-            <option value="yes">Yes</option>
-          </select>
-        </div>
-        <div>
-          <label for="asthma">Were you ever told you had asthma?</label>
-          <select name="asthma" id="asthma">
-            <option value="No">No</option>
-            <option value="Yes">Yes</option>
-          </select>
-        </div>
-        <div>
-          <label for="skin-cancer">Were you ever told you had skin cancer that is not melanoma?</label>
-          <select name="SkinCancer" id="skin-cancer">
-            <option value="No">No</option>
-            <option value="Yes">Yes</option>
-          </select>
-        </div>
-        <div>
-          <label for="kidney-disease">Not including kidney stones, bladder infection or incontinence, were you ever told you had kidney
-            disease?</label>
+          <div>
+            <label for="skin-cancer">Were you ever told you had skin cancer that is not melanoma?</label>
+            <select name="SkinCancer" id="skin-cancer">
+              <option value="No">No</option>
+              <option value="Yes">Yes</option>
+            </select>
+          </div>
+          <div>
+            <label for="kidney-disease">Not including kidney stones, bladder infection or incontinence, were you ever
+              told you had kidney
+              disease?</label>
             <select name="KidneyDisease" id="kidney-disease">
               <option value="No">No</option>
               <option value="Yes">Yes</option>
             </select>
-        </div>
-        <!-- TODO: change stroke -->
-        <div>
-          <label for="stroke">Not including kidney stones, bladder infection or incontinence, were you ever told you had kidney
-            disease?</label>
+          </div>
+          <!-- TODO: change stroke -->
+          <div>
+            <label for="stroke">Not including kidney stones, bladder infection or incontinence, were you ever told you
+              had kidney
+              disease?</label>
             <select name="Stroke" id="stroke">
               <option value="No">No</option>
               <option value="Yes">Yes</option>
             </select>
-        </div>
-        
-        <div>
-          <label for="diabetes">Were you ever told you had diabetes?</label>
-          <select name="Diabetic" id="diabetes">
-            <option value="No">No</option>
-            <option value="No-borderline diabetes">No (borderline diabetes)</option>
-            <option value="Yes">Yes</option>
-            <option value="Yes-during pregnancy">Yes (during pregnancy)</option>
-          </select>
-        </div>
-        <input class="Bo" type="submit">
+          </div>
+
+          <div>
+            <label for="diabetes">Were you ever told you had diabetes?</label>
+            <select name="Diabetic" id="diabetes">
+              <option value="No">No</option>
+              <option value="No-borderline diabetes">No (borderline diabetes)</option>
+              <option value="Yes">Yes</option>
+              <option value="Yes-during pregnancy">Yes (during pregnancy)</option>
+            </select>
+          </div>
+          <input class="Bo" type="submit">
         </form>
-    </div>
+      </div>
   </main>
   <footer></footer>
+  <script src="./script/script.js"></script>
 </body>
 
 </html>

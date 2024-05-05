@@ -1,14 +1,19 @@
 console.log("Hello my team!");
+const patientForm = document.getElementById("patient-form");
 
-document.querySelector(".close").addEventListener("click", function() {
+
+
+document.querySelector(".close").addEventListener("click", function () {
   document.querySelector(".sidebar-body").style.display = "none";
 });
 
-document.querySelector(".open").addEventListener("click", function() {
+document.querySelector(".open").addEventListener("click", function () {
   document.querySelector(".sidebar-body").style.display = "block";
 });
 
-const patientForm = document.getElementById("patient-form");
+
+
+
 patientForm.addEventListener("submit", async (e) => {
   e.preventDefault();
   const patientData = new FormData(patientForm);
