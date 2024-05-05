@@ -27,6 +27,11 @@ body::-webkit-scrollbar {
 }
 
 header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
   background: #1e2430;
   padding: 20px;
   display: flex;
@@ -47,6 +52,7 @@ header button a {
 }
 
 main .sidebar-body {
+  z-index: 1;
   top: 69px;
   position: absolute;
   background-color: rgb(38, 39, 48);
@@ -188,7 +194,7 @@ span.open {
 }
 .h2-title {
   text-align: center;
-  margin-top: 80px;
+  margin-top: 150px;
   margin-bottom: -100px;
 }
 

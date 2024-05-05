@@ -28,6 +28,11 @@ body {
 }
 
 header{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;;;
   background: #1e2430;
     padding: 20px;
     display: flex;
@@ -49,6 +54,7 @@ header{
 
 main {
   .sidebar-body {
+    z-index: 1;
     top: 69px;
     // border-radius: 4px;
     position: absolute;
@@ -211,7 +217,7 @@ span.open {
 
 .h2-title {
   text-align: center;
-  margin-top: 80px;
+  margin-top: 150px;
   margin-bottom: -100px;
 }
 // login form
