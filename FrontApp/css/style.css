@@ -17,19 +17,48 @@ body {
   background-color: var(--main-color);
   min-width: 640px !important;
 }
+body::-webkit-scrollbar {
+  display: none;
+}
 
 .container {
   max-width: 768px;
   margin: 0 auto;
 }
 
+header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: #1e2430;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  box-shadow: 0px 0px 23px -6px red;
+}
+header a {
+  text-decoration: none;
+  color: #FFF;
+  font-size: 18px;
+}
+header button {
+  background: transparent;
+  border: none;
+}
+header button a {
+  text-decoration: underline;
+}
+
 main .sidebar-body {
-  position: fixed;
+  z-index: 1;
+  top: 69px;
+  position: absolute;
   background-color: rgb(38, 39, 48);
   background-attachment: fixed;
   flex-shrink: 0;
   height: calc(-2px + 100vh);
-  top: 0px;
   overflow: auto;
   padding: 6rem 1rem;
   transition: margin-left 300ms ease 0s, box-shadow 300ms ease 0s;
@@ -154,10 +183,55 @@ span.open {
   -o-border-radius: 4px;
 }
 
+.cont-box {
+  margin-left: 20px;
+}
+
 @media (max-width: 1460px) {
   .sidebar-body {
     display: none;
   }
+}
+.h2-title {
+  text-align: center;
+  margin-top: 150px;
+  margin-bottom: -100px;
+}
+
+.form {
+  margin: 150px auto;
+  width: 500px;
+}
+.form input,
+.form button {
+  margin-block-end: 20px;
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border: none;
+  outline: none;
+  background: red;
+  color: #FFF;
+  font-size: 16px;
+  font-weight: bold;
+}
+.form input::placeholder,
+.form button::placeholder {
+  color: rgba(0, 0, 0, 0.2823529412);
+}
+.form input[type=submit],
+.form button[type=submit] {
+  cursor: pointer;
+}
+.form input a,
+.form button a {
+  color: #FFF;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
