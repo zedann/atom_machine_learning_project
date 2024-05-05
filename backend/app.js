@@ -38,13 +38,13 @@ const limiter = rateLimit({
   message: "Too many requests from this IP, please try again in an hour!",
 });
 
-// // To remove data using these defaults:
-// app.use(mongoSanitize());
-//
-// app.use(cookieParser());
+// To remove data using these defaults:
+app.use(mongoSanitize());
 
-// protect against csrf
-app.use(csrf({ cookie: true }));
+// app.use(cookieParser());
+//
+// // protect against csrf
+// app.use(csrf({ cookie: true }));
 
 // app.use(
 //   mongoSanitize({
