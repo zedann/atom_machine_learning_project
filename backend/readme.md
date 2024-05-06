@@ -85,13 +85,13 @@ example:
   "PhysicalActivity":"No",
   "PhysicalHealth":1.0,
   "MentalHealth":6.0,
-  "SleepTime":7.0,*
+  "SleepTime":7.0,
   "DiffWalking":"No",
   "Smoking":"Never smoked",
   "AlcoholDrinking":"Yes",
-  "KidneyDisease":"No",-
+  "KidneyDisease":"No",
   "Asthma":"No",
-  "SkinCancer":"No",*
+  "SkinCancer":"No",
   "Stroke":"No",
   "Diabetic":"No"
   "user": "662b9a910e37e94a30bbc664",
