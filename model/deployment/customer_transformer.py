@@ -33,8 +33,9 @@ class OrdinalEncoder(BaseEstimator, TransformerMixin):
 
             'KidneyDisease' : dict(zip(['No', 'Yes'], [0, 1])),
             'Smoking' : dict(zip(['Never smoked', 'No', 'Former smoker', 'Yes',
+                                  'Current smoker - now smokes some days',
                                   'Current smoker - now smokes every day',
-                                  'Current smoker - now smokes some days'], range(10))),
+                                  ], range(10))),
 
             'DiffWalking' :  dict(zip(['No', 'Yes'], [0, 1])),
                    }

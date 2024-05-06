@@ -5,7 +5,7 @@ from flask_cors import CORS
 from customer_transformer import OrdinalEncoder, NRootTransformer
 
 
-with open('./LgRegRandUS_rc77acc74.pkl', 'rb') as f:
+with open('./LGBMRandUS_acc87.pkl', 'rb') as f:
     GBR_pipeline = joblib.load(f) 
 
 app = Flask(__name__)

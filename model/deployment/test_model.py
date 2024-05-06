@@ -6,7 +6,7 @@ warnings.simplefilter("ignore")
 
 # Loading our pipeline
 try:
-    with open('LgRegRandUS_rc77acc74.pkl', 'rb') as f:
+    with open('LGBMRandUS_acc87.pkl', 'rb') as f:
         pipeline = joblib.load(f)
 
 except Exception as err:
