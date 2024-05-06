@@ -41,10 +41,10 @@ const limiter = rateLimit({
 // To remove data using these defaults:
 app.use(mongoSanitize());
 
-app.use(cookieParser());
-
-// protect against csrf
-app.use(csrf({ cookie: true }));
+// app.use(cookieParser());
+//
+// // protect against csrf
+// app.use(csrf({ cookie: true }));
 
 // app.use(
 //   mongoSanitize({
