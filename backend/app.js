@@ -1,6 +1,6 @@
 const express = require("express");
-const csrf = require("csurf");
-const cookieParser = require("cookie-parser");
+// const csrf = require("csurf");
+// const cookieParser = require("cookie-parser");
 const path = require("path");
 const mongoSanitize = require("express-mongo-sanitize");
 const xss = require("xss-clean");
