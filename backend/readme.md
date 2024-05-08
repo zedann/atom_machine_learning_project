@@ -79,8 +79,8 @@ example:
 ```json
 {
   "Sex":"Male",
-  "AgeCategory":"25-29", 
-  "BMI":21.62, 
+  "AgeCategory":"25-29",
+  "BMI":21.62,
   "GenHealth":"Excellent",
   "PhysicalActivity":"No",
   "PhysicalHealth":1.0,
@@ -95,6 +95,6 @@ example:
   "Stroke":"No",
   "Diabetic":"No"
   "user": "662b9a910e37e94a30bbc664",
-  "result": 2134125
+  "result": 99
 }
 ```
