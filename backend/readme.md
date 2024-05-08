@@ -95,6 +95,6 @@ example:
   "Stroke":"No",
   "Diabetic":"No"
   "user": "662b9a910e37e94a30bbc664",
-  "result": 99
+  "result": 50
 }
 ```
