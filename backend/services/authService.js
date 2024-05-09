@@ -37,7 +37,7 @@ exports.signup = asyncHandler(async (req, res, next) => {
 
   const url = `${req.protocol}://${req.get("host")}/me`;
   console.log(url);
-  // await new Email(newUser, url).sendWelcome();
+  await new Email(newUser, url).sendWelcome();
 
   createSendToken(newUser, 201, res);
 });
@@ -173,7 +173,7 @@ exports.forgotPassword = asyncHandler(async (req, res, next) => {
     const resetURL = `${req.protocol}://${req.get(
       "host"
     )}/api/v1/users/resetPassword/${resetToken}`;
-    // await new Email(user, resetURL).sendPasswordReset();
+    await new Email(user, resetURL).sendPasswordReset();
 
     res.status(200).json({
       status: "success",
