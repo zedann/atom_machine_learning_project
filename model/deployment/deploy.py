@@ -21,7 +21,7 @@ def home():
 def predict():
     try:
         json_data = request.get_json()
-        data = pd.DataFrame(json_data)
+        data = pd.DataFrame(json_data, index=[0])
             
         new_data_transformed = GBR_pipeline.named_steps['preprocessor'].transform(data)
             
