@@ -25,8 +25,8 @@ def predict():
             
         new_data_transformed = GBR_pipeline.named_steps['preprocessor'].transform(data)
             
-        prediction = GBR_pipeline.named_steps['classifier'].predict(new_data_transformed)
-
+        prediction = GBR_pipeline.named_steps['classifier'].predict_proba(new_data_transformed)
+        prediction = prediction[:, 1] * 100
         return jsonify({'classifier': prediction.tolist()})
     
     except Exception as e:

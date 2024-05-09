@@ -42,4 +42,4 @@ print(f"Predicted Do you Have a heart disease?: {predictions}")
 # Use the trained classifier to make predictions probability of 0, probability of 0
 predictions_proba = pipeline.named_steps['classifier'].predict_proba(new_data_transformed)
 # Print the predicted probability of not having heart disease, having
-print(f"Predicted heart disease of having heart disease?: {predictions_proba[0:2, 1]}")
+print(f"Predicted heart disease of having heart disease?: {predictions_proba[:, 1]*100}")
