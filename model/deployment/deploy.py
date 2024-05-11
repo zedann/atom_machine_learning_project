@@ -5,7 +5,7 @@ from flask_cors import CORS
 from customer_transformer import OrdinalEncoder, NRootTransformer
 
 
-with open('./LgRegRandUS_rc77acc74.pkl', 'rb') as f:
+with open('./LGBMRandUS_acc87.pkl', 'rb') as f:
     GBR_pipeline = joblib.load(f) 
 
 app = Flask(__name__)
@@ -21,13 +21,13 @@ def home():
 def predict():
     try:
         json_data = request.get_json()
-        data = pd.DataFrame(json_data)
+        data = pd.DataFrame(json_data, index=[0])
             
         new_data_transformed = GBR_pipeline.named_steps['preprocessor'].transform(data)
             
-        prediction = GBR_pipeline.named_steps['classifier'].predict(new_data_transformed)
-
-        return jsonify({'classifier': prediction.tolist()})
+        prediction = GBR_pipeline.named_steps['classifier'].predict_proba(new_data_transformed)
+        prediction = prediction[0, 1] * 100
+        return jsonify({'classifier': prediction})
     
     except Exception as e:
         return jsonify({"error": str(e)})

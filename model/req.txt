@@ -1,0 +1,6 @@
+flask
+joblib
+pandas 
+flask_cors
+scikit-learn
+lightgbm

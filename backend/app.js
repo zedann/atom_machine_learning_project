@@ -1,6 +1,6 @@
 const express = require("express");
-const csrf = require("csurf");
-const cookieParser = require("cookie-parser");
+// const csrf = require("csurf");
+// const cookieParser = require("cookie-parser");
 const path = require("path");
 const mongoSanitize = require("express-mongo-sanitize");
 const xss = require("xss-clean");
@@ -41,10 +41,10 @@ const limiter = rateLimit({
 // To remove data using these defaults:
 app.use(mongoSanitize());
 
-app.use(cookieParser());
-
-// protect against csrf
-app.use(csrf({ cookie: true }));
+// app.use(cookieParser());
+//
+// // protect against csrf
+// app.use(csrf({ cookie: true }));
 
 // app.use(
 //   mongoSanitize({

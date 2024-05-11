@@ -27,7 +27,7 @@ module.exports = class Email {
       port: process.env.EMAIL_PORT,
       auth: {
         user: process.env.EMAIL_USERNAME,
-        pass: process.env.EMAIL_PASSWORD,
+        pass: process.env.EMAIL_APP_PASSWORD,
       },
     });
   }
@@ -47,7 +47,9 @@ module.exports = class Email {
       to: this.to,
       subject,
       html,
-      text: htmlToText.fromString(html),
+      text: htmlToText.convert(html, {
+        wordwrap: 130
+      }),
     };
 
     // 3) Create a transport and send email
