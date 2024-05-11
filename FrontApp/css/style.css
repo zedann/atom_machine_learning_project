@@ -237,8 +237,8 @@ span.open {
 /*# sourceMappingURL=style.css.map */
 
 @media (max-width:500px){
-  .main{
-    width: fit-content;
+  main{
+    width: fit-content !important;
   }
   form{
     width: fit-content;
