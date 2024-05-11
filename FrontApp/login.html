@@ -1,63 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atom Machine Learning</title>
+    <link rel="shortcut icon" href="./img/atom.jpeg" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./script/login.js" defer></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Atom Machine Learning</title>
-  <link rel="shortcut icon" href="./img/atom.jpeg" type="image/x-icon" />
-  <link rel="stylesheet" href="./css/style.css" />
-  <script src="./script/login.js" defer></script>
-</head>
-
-<body>
-  <header>
-    <div class="home">
-      <a href="./index.html">
-        home
-      </a>
-    </div>
-    <div class="login-signin">
-      <button>
-        <a href="./login.html">
-          Login
-        </a>
-      </button>
-      <button>
-        <a href="./signin.html">
-          SignIn
-        </a>
-      </button>
-    </div>
-  </header>
-  <main>
-    <h2 class="h2-title">Login</h2>
-    <form id="login-form" class="form" method="post">
-
-      <div>
-        <div>
-          <label for="email">Email</label>
-        </div>
-        <input type="email" required name="email" id="email" placeholder="Email">
+  <body>
+    <header>
+      <div class="home">
+        <a href="./index.html"> home </a>
       </div>
-      <div>
-        <div>
-          <label for="password">Password</label>
-        </div>
-        <input type="password" required name="password" id="password" placeholder="Password">
-      </div>
-      <div>
-        <input type="submit" value=" Login">
-      </div>
-      <div>
+      <div class="login-signin">
         <button>
-          <a href="./signin.html">
-            SignIn
-          </a>
+          <a href="./login.html"> Login </a>
+        </button>
+        <button>
+          <a href="./signin.html"> SignUp </a>
         </button>
       </div>
-    </form>
-  </main>
-</body>
-
+    </header>
+    <main>
+      <h2 class="h2-title">Login</h2>
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p id="modalMessage">
+            This is a modal! Click outside of it to close.
+          </p>
+        </div>
+      </div>
+      <div id="forgetPasswordModel" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <form action="" class="form" id="forget-form">
+            <input
+              type="text"
+              name="email"
+              class="forget-email"
+              placeholder="Enter Your Email"
+            />
+            <input type="submit" class="resetBtn" value="Reset Password" />
+          </form>
+        </div>
+      </div>
+      <form id="login-form" class="form" method="post">
+        <div>
+          <div>
+            <label for="email">Email</label>
+          </div>
+          <input
+            type="email"
+            required
+            name="email"
+            id="email"
+            placeholder="Email"
+          />
+        </div>
+        <div>
+          <div>
+            <label for="password">Password</label>
+          </div>
+          <input
+            type="password"
+            required
+            name="password"
+            id="password"
+            placeholder="Password"
+          />
+        </div>
+        <div>
+          <a href="#" class="forget-btn" style="color: #e9394e"
+            >forgot password?</a
+          >
+          <input type="submit" value=" Login" />
+        </div>
+      </form>
+    </main>
+  </body>
 </html>

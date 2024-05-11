@@ -40,7 +40,7 @@ header {
 }
 header a {
   text-decoration: none;
-  color: #FFF;
+  color: #fff;
   font-size: 18px;
 }
 header button {
@@ -84,7 +84,7 @@ main .sidebar-body form input {
   border-radius: 4px;
   width: 310px;
   background: var(--main-color);
-  color: #FFF;
+  color: #fff;
   margin-bottom: 24px;
 }
 main .sidebar-body::-webkit-scrollbar {
@@ -93,7 +93,6 @@ main .sidebar-body::-webkit-scrollbar {
 main .sidebar-body::-webkit-scrollbar {
   display: none !important;
 }
-
 
 .Bo {
   display: inline-flex;
@@ -159,13 +158,13 @@ main .sidebar-body::-webkit-scrollbar {
   color: rgb(85, 26, 139);
 }
 
-.close {
+.closeSide {
   position: absolute;
   top: 10px;
   right: 10px;
   cursor: pointer;
 }
-.close svg {
+.closeSide svg {
   width: 20px;
 }
 
@@ -214,8 +213,8 @@ span.open {
   -o-border-radius: 8px;
   border: none;
   outline: none;
-  background: red;
-  color: #FFF;
+  background: #e9394e;
+  color: #fff;
   font-size: 16px;
   font-weight: bold;
 }
@@ -223,25 +222,103 @@ span.open {
 .form button::placeholder {
   color: rgba(0, 0, 0, 0.2823529412);
 }
-.form input[type=submit],
-.form button[type=submit] {
+.form input[type="submit"],
+.form button[type="submit"] {
   cursor: pointer;
 }
 .form input a,
 .form button a {
-  color: #FFF;
+  color: #fff;
   text-decoration: none;
   cursor: pointer;
 }
 
+/* modal */
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  border: none;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: rgba(0, 0, 0, 0.4);
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+#modalMessage {
+  color: #e9394e;
+  text-align: center;
+  font-size: 30px;
+}
+
+.logout {
+  display: none;
+}
 /*# sourceMappingURL=style.css.map */
 
-@media (max-width:500px){
-  main{
+@media (max-width: 500px) {
+  main {
     width: fit-content !important;
   }
-  form{
+  form {
     width: fit-content;
-    margin: 150px 0 !important; 
+    margin: 150px 0 !important;
   }
+}
+
+.card {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #333;
+}
+
+.info {
+  font-size: 16px;
+  color: #000;
+}
+
+.info p {
+  margin-bottom: 8px;
+}
+
+.info p strong {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.info p span {
+  color: #666;
 }

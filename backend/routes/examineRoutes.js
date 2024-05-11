@@ -13,7 +13,7 @@ const {
   deleteExamine,
 } = exmineService;
 
-router.route("/").post(createExamine).get(authService.protect, getAllExamine);
+router.route("/").post(createExamine).get(getAllExamine);
 router
   .route("/:id")
   .get(getExamine)

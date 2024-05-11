@@ -25,8 +25,22 @@
       </button>
       <button>
         <a href="./signin.html">
-          SignIn
+          SignUp
         </a>
+      </button>
+    </div>
+    <div class="logout">
+      <button class="logoutBtn">
+        <a href="#">
+          Logout
+        </a>
+
+      </button>
+      <button class="pre-history">
+        <a href="./history.html">
+          previous history
+        </a>
+        
       </button>
     </div>
   </header>
@@ -40,12 +54,19 @@
             Are you wondering about the condition of your heart? This <br> app will help
             you to diagonise it!
           </h2>
+
+          <div id="myModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p id="modalMessage">This is a modal! Click outside of it to close.</p>
+              <img src="./img/help_heart.jpg" alt="">
+            </div>
+          </div>
+
           <div class="cont">
 
             <div class="ph">
-              <img class="photo" src="./img/d2.png" alt="Loading">
-              <p class="last">I'll help you diagnose your heart health! <br> - Dr. Logistic Regression</p>
-
+              <img class="photo" src="./img/heart2.svg" alt="Heart">
             </div>
             <div class="Di">
               <p>
@@ -80,7 +101,7 @@
               <br>
               <p>
                 You can see the steps of building the model, evaluating it, and cleaning
-                the data itself on my GitHub repo
+                the data itself on GitHub repo
                 <a class="link" href="https://github.com/zedann/atom_machine_learning_project">Here</a>.
               </p>
             </div>
@@ -89,7 +110,7 @@
         </div>
       </div>
       <div class="sidebar-body">
-        <div class="close">
+        <div class="closeSide">
           <svg xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
             <path
@@ -103,13 +124,17 @@
         <form id="patient-form">
           <div>
             <label for="Sex">Sex</label>
+             <select name="Sex" id="Sex">
+              <option value="Male" selected>Male</option>
+              <option value="Female" >Female</option>
+            </select>
           </div>
           <div>
             <div>
               <label for="Agecategory">Age category</label>
             </div>
 
-            <select name="Agecategory" id="Agecategory">
+            <select name="AgeCategory" id="Agecategory">
               <option value="18-24" selected>18-24</option>
               <option value="25-29">25-29</option>
               <option value="30-34">30-34</option>
@@ -246,7 +271,7 @@
           </div>
           <div>
             <label for="asthma">Were you ever told you had asthma?</label>
-            <select name="asthma" id="asthma">
+            <select name="Asthma" id="asthma">
               <option value="No">No</option>
               <option value="Yes">Yes</option>
             </select>
