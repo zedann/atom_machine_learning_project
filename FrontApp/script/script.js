@@ -3,11 +3,11 @@ const patientForm = document.getElementById("patient-form");
 
 
 
-document.querySelector(".close").addEventListener("click", function () {
+document.querySelector(".close").addEventListener("click", function() {
   document.querySelector(".sidebar-body").style.display = "none";
 });
 
-document.querySelector(".open").addEventListener("click", function () {
+document.querySelector(".open").addEventListener("click", function() {
   document.querySelector(".sidebar-body").style.display = "block";
 });
 
@@ -29,7 +29,8 @@ patientForm.addEventListener("submit", async (e) => {
 
 
   // ai
-  const predicted = await predict();
+  const predicted = await predict(patientDataObj);
+  console.log("predicted: ", predicted);
   patientDataObj['result'] = predicted;
   /*
   * if user logged/exist
@@ -38,7 +39,7 @@ patientForm.addEventListener("submit", async (e) => {
   * */
 
   if (localStorage.getItem('userId')) {
-    patientDataObj['user'] = localStorage.getItem('user');
+    patientDataObj['user'] = localStorage.getItem('userId');
   }
   const resToBackEnd = fetch("http://127.0.0.1:3000/api/v1/examines", {
     method: "POST",
@@ -53,7 +54,7 @@ patientForm.addEventListener("submit", async (e) => {
   console.log(dataFromBackend);
 });
 
-async function predict() {
+async function predict(patientDataObj) {
   const res = await fetch("http://127.0.0.1:5000/predict", {
     method: "POST",
     headers: {

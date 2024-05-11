@@ -5,6 +5,9 @@ const examineSchema = new mongoose.Schema(
     Sex: {
       type: String,
     },
+    AgeCategory: {
+      type: String,
+    },
     BMI: {
       type: Number,
     },
