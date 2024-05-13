@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atom Machine Learning</title>
+    <link rel="shortcut icon" href="./img/atom.jpeg" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./script/signin.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="home">
+        <a href="./index.html"> home </a>
+      </div>
+      <div class="login-signin">
+        <button>
+          <a href="./login.html"> Login </a>
+        </button>
+        <button>
+          <a href="./signin.html"> SignUp </a>
+        </button>
+      </div>
+    </header>
+    <main>
+      <h2 class="h2-title">SignUp</h2>
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p id="modalMessage">
+            This is a modal! Click outside of it to close.
+          </p>
+        </div>
+      </div>
+      <form id="signin-form" class="form" method="post">
+        <div>
+          <div>
+            <label for="name">Name</label>
+          </div>
+          <input
+            type="text"
+            required
+            name="name"
+            id="name"
+            placeholder="Name"
+          />
+        </div>
+        <div>
+          <div>
+            <label for="email">Email</label>
+          </div>
+          <input
+            type="email"
+            required
+            name="email"
+            id="email"
+            placeholder="Email"
+          />
+        </div>
+        <div>
+          <div>
+            <label for="password">Password</label>
+          </div>
+          <input
+            type="password"
+            required
+            name="password"
+            id="password"
+            placeholder="Password"
+          />
+        </div>
+        <div>
+          <div>
+            <label for="passwordConfirm">PasswordConfirm</label>
+          </div>
+          <input
+            type="password"
+            required
+            name="passwordConfirm"
+            id="passwordConfirm"
+            placeholder="Password confirm"
+          />
+        </div>
+        <div>
+          <div>
+            <label for="phone">Phone</label>
+          </div>
+          <input
+            type="text"
+            required
+            name="phone"
+            id="phone"
+            placeholder="Phone"
+          />
+        </div>
+        <div>
+          <input type="submit" value="SignUp" />
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

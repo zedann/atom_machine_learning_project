@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atom Machine Learning</title>
+  <link rel="shortcut icon" href="./img/atom.jpeg" type="image/x-icon" />
+  <link rel="stylesheet" href="./css/style.css" />
+
+</head>
+
+<body>
+  <header>
+    <div class="home">
+      <a href="./index.html">
+        home
+      </a>
+    </div>
+    <div class="login-signin">
+      <button>
+        <a href="./login.html">
+          Login
+        </a>
+      </button>
+      <button>
+        <a href="./signin.html">
+          SignUp
+        </a>
+      </button>
+    </div>
+    <div class="logout">
+      <button class="logoutBtn">
+        <a href="#">
+          Logout
+        </a>
+
+      </button>
+      <button class="pre-history">
+        <a href="./history.html">
+          previous history
+        </a>
+        
+      </button>
+    </div>
+  </header>
+  <main>
+    <div class="body">
+      <div class="container">
+        <div class="cont-box">
+          <h1 class="head">Heart Disease prediction <span class="open">Open Feature Selection</span></h1>
+
+          <h2 class="h2">
+            Are you wondering about the condition of your heart? This <br> app will help
+            you to diagonise it!
+          </h2>
+
+          <div id="myModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p id="modalMessage">This is a modal! Click outside of it to close.</p>
+              <img src="./img/help_heart.jpg" alt="">
+            </div>
+          </div>
+
+          <div class="cont">
+
+            <div class="ph">
+              <img class="photo" src="./img/heart2.svg" alt="Heart">
+            </div>
+            <div class="Di">
+              <p>
+                Did you know that machine learning models can help you predict heart
+                disease pretty accurately? In this app, you can estimate your chance of
+                heart disease (yes/no) in seconds!
+                <br>
+                Here, a logistic regression model using an undersampling technique was
+                constructed using survey data of over 300k US residents from the year
+                2020. This application is based on it because it has proven to be better
+                than the random forest (it achieves an accuracy of about 80%, which is
+                quite good).
+                To predict your heart disease status, simply follow the steps bellow:
+                <br>
+                <br>
+              <ol type="1">
+                <li>Enter the parameters that best describe you;</li>
+                <li>Press the "Predict" button and wait for the result.</li>
+              </ol>
+              <br>
+              <h4>
+                Keep in mind that this results is not equivalent to a medical diagnosis! This
+                model would never be adopted by health care facilities because of its less
+                than perfect accuracy, so if you have any problems, consult a human doctor.
+              </h4>
+              </p>
+              <br>
+              <p>
+                Author: My Team(<a class="link"
+                  href="https://github.com/zedann/atom_machine_learning_project/tree/main/FrontApp">Github</a>)
+              </p>
+              <br>
+              <p>
+                You can see the steps of building the model, evaluating it, and cleaning
+                the data itself on GitHub repo
+                <a class="link" href="https://github.com/zedann/atom_machine_learning_project">Here</a>.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sidebar-body">
+        <div class="closeSide">
+          <svg xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path
+              d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+          </svg>
+        </div>
+        <div class="heaeder-sidebar">
+          <h3>Feature Selection</h3>
+          <img src="./img/heart.png" alt="heart" />
+        </div>
+        <form id="patient-form">
+          <div>
+            <label for="Sex">Sex</label>
+             <select name="Sex" id="Sex">
+              <option value="Male" selected>Male</option>
+              <option value="Female" >Female</option>
+            </select>
+          </div>
+          <div>
+            <div>
+              <label for="Agecategory">Age category</label>
+            </div>
+
+            <select name="AgeCategory" id="Agecategory">
+              <option value="18-24" selected>18-24</option>
+              <option value="25-29">25-29</option>
+              <option value="30-34">30-34</option>
+              <option value="35-39">35-39</option>
+              <option value="40-44">40-44</option>
+              <option value="45-49">45-49</option>
+              <option value="50-54">50-54</option>
+              <option value="55-59">55-59</option>
+              <option value="60-64">60-64</option>
+              <option value="65-69">65-69</option>
+              <option value="70-74">70-74</option>
+              <option value="75-79">75-79</option>
+              <option value="80 or older">80 or older</option>
+            </select>
+          </div>
+
+          <div>
+            <div>
+              <div>
+                <label for="BMI-category">BMI category</label>
+              </div>
+              <input type="number" name="BMI" id="BMI-category">
+            </div>
+          </div>
+          <div>
+            <div>
+              <div>
+                <label for="sleep-hours">How many hours on average do you sleep?</label>
+              </div>
+              <input type="number" min="1" id="sleep-hours" name="SleepTime">
+            </div>
+          </div>
+          <div>
+            <div>
+              <div>
+                <label for="general-health">How can you define your general health?</label>
+              </div>
+              <select name="GenHealth" id="general-health">
+                <option value="Excellent" selected>Excellent</option>
+                <option value="Fair">Fair</option>
+                <option value="Good">Good</option>
+                <option value="Poor">Poor</option>
+                <option value="Very good">Very good</option>
+              </select>
+            </div>
+
+          </div>
+          <div>
+            <div>
+              <div>
+                <label for="exercis">During the past month, other than your regular job, did you participate in any
+                  physical
+                  activities or exercis
+                  es such as running, calisthenics, golf, gardening, or walking for exercise?</label>
+              </div>
+              <select name="PhysicalActivity" id="exercis">
+                <option value="No" selected>No</option>
+                <option value="Yes">Yes</option>
+              </select>
+            </div>
+
+          </div>
+          <div>
+            <div>
+              <div>
+                <label for="physical-health">Now thinking about your physical health, which includes physical illness
+                  and
+                  injury, for how many days
+                  during the past 30 days was your physical health not good?</label>
+              </div>
+              <input type="number" min="1" max="30" id="physical-health" name="PhysicalHealth">
+            </div>
+          </div>
+          <div>
+            <div>
+              <div>
+                <label for="mental-health">Now thinking about your mental health, which includes stress, depression, and
+                  problems with emotions,
+                  for how many days during the past 30 days was your mental health not good?</label>
+              </div>
+              <input type="number" min="1" max="30" id="mental-health" name="MentalHealth">
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <div>
+                <label for="walking-difficulty">Do you have serious difficulty walking or climbing stairs?</label>
+              </div>
+              <select name="DiffWalking" id="walking-difficulty">
+                <option value="No" selected>No</option>
+                <option value="Yes">Yes</option>
+              </select>
+            </div>
+
+          </div>
+          <div>
+            <div>
+              <div>
+                <label for="smoking-status">What is your Smoking Status?</label>
+              </div>
+              <select name="Smoking" id="smoking-status">
+                <option value="Never smoked" selected>Never smoked</option>
+                <option value="No">No</option>
+                <option value="Former smoker">Former smoker</option>
+                <option value="Yes">Yes</option>
+                <option value="Current smoker now smokes some days">Current smoker - now smokes some days</option>
+                <option value="Current smoker now smokes every day">Current smoker - now smokes every day</option>
+              </select>
+            </div>
+
+          </div>
+          <div>
+            <div>
+              <div>
+                <label for="drink-alcohol">Are you an Adults who have had at least one drink of alcohol in the past 30
+                  days.?</label>
+              </div>
+              <select name="AlcoholDrinking"
+                id="Have you smoked at least 100 cigarettes in your entire life (approx. 5 packs)?)">
+                <option value="No" selected>No</option>
+                <option value="Yes">Yes</option>
+              </select>
+            </div>
+
+          </div>
+          <div>
+            <label for="kidney-stones">Not including kidney stones, bladder infection or incontinence, were you ever
+              told you had kidney disease?</label>
+            <select name="smoking-status" id="kidney-stones">
+              <option value="No">No</option>
+              <option value="yes">Yes</option>
+            </select>
+          </div>
+          <div>
+            <label for="asthma">Were you ever told you had asthma?</label>
+            <select name="Asthma" id="asthma">
+              <option value="No">No</option>
+              <option value="Yes">Yes</option>
+            </select>
+          </div>
+          <div>
+            <label for="skin-cancer">Were you ever told you had skin cancer that is not melanoma?</label>
+            <select name="SkinCancer" id="skin-cancer">
+              <option value="No">No</option>
+              <option value="Yes">Yes</option>
+            </select>
+          </div>
+          <div>
+            <label for="kidney-disease">Not including kidney stones, bladder infection or incontinence, were you ever
+              told you had kidney
+              disease?</label>
+            <select name="KidneyDisease" id="kidney-disease">
+              <option value="No">No</option>
+              <option value="Yes">Yes</option>
+            </select>
+          </div>
+          <!-- TODO: change stroke -->
+          <div>
+            <label for="stroke">Not including kidney stones, bladder infection or incontinence, were you ever told you
+              had kidney
+              disease?</label>
+            <select name="Stroke" id="stroke">
+              <option value="No">No</option>
+              <option value="Yes">Yes</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="diabetes">Were you ever told you had diabetes?</label>
+            <select name="Diabetic" id="diabetes">
+              <option value="No">No</option>
+              <option value="No-borderline diabetes">No (borderline diabetes)</option>
+              <option value="Yes">Yes</option>
+              <option value="Yes-during pregnancy">Yes (during pregnancy)</option>
+            </select>
+          </div>
+          <input class="Bo" type="submit">
+        </form>
+      </div>
+  </main>
+  <footer></footer>
+  <script src="./script/script.js"></script>
+</body>
+
+</html>
